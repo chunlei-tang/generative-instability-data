@@ -25,3 +25,9 @@ Each evidence pack was evaluated multiple times under controlled prompting condi
 - All outputs were generated using publicly accessible large language models.  
 - This dataset is intended to demonstrate instability patterns rather than serve as a benchmark.  
 - Additional materials are available from the author upon reasonable request.
+
+## Citation
+
+If you use this dataset, please cite the associated manuscript:
+
+Tang, C. Stabilizing Decisions under Structural Instability in Generative Systems. (under review)
