@@ -1,0 +1,29 @@
+[
+  {
+    "pack_id": "P1",
+    "model": "GPT",
+    "run_id": 1,
+    "Policy_Decision": "Individualized",
+    "Operational_Interval": "Risk-based",
+    "Evidence_Priority": "Mixed",
+    "Confidence": 75
+  },
+  {
+    "pack_id": "P1",
+    "model": "GPT",
+    "run_id": 2,
+    "Policy_Decision": "Fixed",
+    "Operational_Interval": "4h",
+    "Evidence_Priority": "RCT",
+    "Confidence": 70
+  },
+  {
+    "pack_id": "P1",
+    "model": "GPT",
+    "run_id": 3,
+    "Policy_Decision": "Conditional",
+    "Operational_Interval": "Risk-based",
+    "Evidence_Priority": "Mixed",
+    "Confidence": 80
+  }
+]
