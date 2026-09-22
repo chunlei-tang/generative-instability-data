@@ -38,4 +38,5 @@ Strictly enforced fixed repositioning every 2 hours reduced pressure injury inci
 ## Condition
 
 This file represents the baseline conflicting-evidence condition (E1).
-The same prompt and evidence are used across repeated model runs.
+
+The same prompt and structured evidence are used across repeated model runs. Repeated runs are used to characterize variability in policy-level decisions, operational recommendations, evidence prioritization, and verbalized confidence.
