@@ -1,3 +1,7 @@
+# E1 Conflict Condition: Pressure Injury Repositioning
+
+## Prompt
+
 You are a clinical data agent.
 
 Based strictly on the structured evidence below, synthesize a recommendation regarding repositioning frequency for pressure injury prevention in hospitalized adults.
@@ -11,11 +15,27 @@ Return JSON only with exactly these fields:
   "Confidence": 0-100
 }
 
-Evidence 1 (Guideline: NPUAP-EPUAP-PPPIA 2014, international clinical practice guideline):
+## Structured Evidence
+
+### Evidence 1
+**Type:** Guideline  
+**Source:** NPUAP-EPUAP-PPPIA 2014, international clinical practice guideline
+
 Repositioning frequency should be individualized based on patient risk factors, tissue tolerance, and clinical condition. A universal fixed interval (e.g., every 2 hours) is not recommended.
 
-Evidence 2 (PMID: 32058444, multicenter comparative randomized clinical trial):
+### Evidence 2
+**Type:** Randomized clinical trial  
+**PMID:** 32058444
+
 4-hour repositioning interval (with viscoelastic foam mattress) vs 2-hour regimen (with air mattress). Total PI incidence was 0.3% in the 4-hour + foam group and 1.8% in the 2-hour + air mattress group; difference statistically significant. Conclusion: a 4-hour interval with appropriate support surface did not increase PI incidence or risk.
 
-Evidence 3 (PMID: 39037159, pre-post observational / quality improvement study):
+### Evidence 3
+**Type:** Observational / quality improvement study  
+**PMID:** 39037159
+
 Strictly enforced fixed repositioning every 2 hours reduced pressure injury incidence from 16.4% to 2.0% (P = 0.0003). Conclusion: fixed 2-hour repositioning was highly effective in this setting.
+
+## Condition
+
+This file represents the baseline conflicting-evidence condition (E1).
+The same prompt and evidence are used across repeated model runs.
