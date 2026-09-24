@@ -1,0 +1,90 @@
+[
+  {
+    "phase": "revised_20run",
+    "model": "GPT-6 Astra Medium",
+    "condition": "E1_baseline",
+    "item_id": "P1",
+    "run_id": 1,
+    "Policy_Decision": "Individualized",
+    "Operational_Interval": "Risk-based",
+    "Evidence_Priority": "Mixed",
+    "Confidence": 88
+  },
+  {
+    "phase": "revised_20run",
+    "model": "GPT-6 Astra Medium",
+    "condition": "E1_baseline",
+    "item_id": "P2",
+    "run_id": 1,
+    "Policy_Decision": "Conditional",
+    "Operational_Interval": "4h",
+    "Evidence_Priority": "RCT",
+    "Confidence": 75
+  },
+  {
+    "phase": "revised_20run",
+    "model": "GPT-6 Astra Medium",
+    "condition": "E1_baseline",
+    "item_id": "P3",
+    "run_id": 1,
+    "Policy_Decision": "Individualized",
+    "Operational_Interval": "Risk-based",
+    "Evidence_Priority": "Guideline",
+    "Confidence": 84
+  },
+  {
+    "phase": "revised_20run",
+    "model": "GPT-6 Astra Medium",
+    "condition": "E1_baseline",
+    "item_id": "P4",
+    "run_id": 1,
+    "Policy_Decision": "Conditional",
+    "Operational_Interval": "Risk-based",
+    "Evidence_Priority": "Mixed",
+    "Confidence": 80
+  },
+  {
+    "phase": "revised_20run",
+    "model": "Gemini 3.1 Pro",
+    "condition": "E1_baseline",
+    "item_id": "P1",
+    "run_id": 1,
+    "Policy_Decision": "Individualized",
+    "Operational_Interval": "Risk-based",
+    "Evidence_Priority": "Mixed",
+    "Confidence": 80
+  },
+  {
+    "phase": "revised_20run",
+    "model": "Gemini 3.1 Pro",
+    "condition": "E1_baseline",
+    "item_id": "P2",
+    "run_id": 1,
+    "Policy_Decision": "Individualized",
+    "Operational_Interval": "NotSpecified",
+    "Evidence_Priority": "RCT",
+    "Confidence": 85
+  },
+  {
+    "phase": "revised_20run",
+    "model": "Gemini 3.1 Pro",
+    "condition": "E1_baseline",
+    "item_id": "P3",
+    "run_id": 1,
+    "Policy_Decision": "Conditional",
+    "Operational_Interval": "4h",
+    "Evidence_Priority": "Mixed",
+    "Confidence": 75
+  },
+  {
+    "phase": "revised_20run",
+    "model": "Gemini 3.1 Pro",
+    "condition": "E1_baseline",
+    "item_id": "P4",
+    "run_id": 1,
+    "Policy_Decision": "Individualized",
+    "Operational_Interval": "Risk-based",
+    "Evidence_Priority": "Mixed",
+    "Confidence": 80
+  }
+]
