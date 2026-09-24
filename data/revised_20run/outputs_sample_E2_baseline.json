@@ -1,0 +1,90 @@
+[
+  {
+    "phase": "revised_20run",
+    "model": "GPT-6 Astra Medium",
+    "condition": "E2_baseline",
+    "item_id": "Q01",
+    "run_id": 1,
+    "Policy_Decision": "Conditional",
+    "Operational_Interval": "NotSpecified",
+    "Evidence_Priority": "Mixed",
+    "Confidence": 95
+  },
+  {
+    "phase": "revised_20run",
+    "model": "GPT-6 Astra Medium",
+    "condition": "E2_baseline",
+    "item_id": "Q02",
+    "run_id": 1,
+    "Policy_Decision": "Individualized",
+    "Operational_Interval": "NotSpecified",
+    "Evidence_Priority": "Mixed",
+    "Confidence": 85
+  },
+  {
+    "phase": "revised_20run",
+    "model": "GPT-6 Astra Medium",
+    "condition": "E2_baseline",
+    "item_id": "Q03",
+    "run_id": 1,
+    "Policy_Decision": "Conditional",
+    "Operational_Interval": "NotSpecified",
+    "Evidence_Priority": "Mixed",
+    "Confidence": 89
+  },
+  {
+    "phase": "revised_20run",
+    "model": "GPT-6 Astra Medium",
+    "condition": "E2_baseline",
+    "item_id": "Q04",
+    "run_id": 1,
+    "Policy_Decision": "Conditional",
+    "Operational_Interval": "NotSpecified",
+    "Evidence_Priority": "Mixed",
+    "Confidence": 97
+  },
+  {
+    "phase": "revised_20run",
+    "model": "Gemini 3.1 Pro",
+    "condition": "E2_baseline",
+    "item_id": "Q01",
+    "run_id": 1,
+    "Policy_Decision": "Fixed",
+    "Operational_Interval": "NotSpecified",
+    "Evidence_Priority": "Mixed",
+    "Confidence": 95
+  },
+  {
+    "phase": "revised_20run",
+    "model": "Gemini 3.1 Pro",
+    "condition": "E2_baseline",
+    "item_id": "Q02",
+    "run_id": 1,
+    "Policy_Decision": "Conditional",
+    "Operational_Interval": "NotSpecified",
+    "Evidence_Priority": "Mixed",
+    "Confidence": 90
+  },
+  {
+    "phase": "revised_20run",
+    "model": "Gemini 3.1 Pro",
+    "condition": "E2_baseline",
+    "item_id": "Q03",
+    "run_id": 1,
+    "Policy_Decision": "Individualized",
+    "Operational_Interval": "NotSpecified",
+    "Evidence_Priority": "Mixed",
+    "Confidence": 85
+  },
+  {
+    "phase": "revised_20run",
+    "model": "Gemini 3.1 Pro",
+    "condition": "E2_baseline",
+    "item_id": "Q04",
+    "run_id": 1,
+    "Policy_Decision": "Fixed",
+    "Operational_Interval": "NotSpecified",
+    "Evidence_Priority": "Mixed",
+    "Confidence": 95
+  }
+]
