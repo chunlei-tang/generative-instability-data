@@ -1,0 +1,90 @@
+[
+  {
+    "phase": "initial_7run",
+    "model": "ChatGPT 5.1 Thinking",
+    "condition": "E1",
+    "item_id": "P1",
+    "run_id": 1,
+    "Policy_Decision": "Individualized",
+    "Operational_Interval": "Risk-based",
+    "Evidence_Priority": "Mixed",
+    "Confidence": 75
+  },
+  {
+    "phase": "initial_7run",
+    "model": "ChatGPT 5.1 Thinking",
+    "condition": "E1",
+    "item_id": "P2",
+    "run_id": 1,
+    "Policy_Decision": "Fixed",
+    "Operational_Interval": "4h",
+    "Evidence_Priority": "RCT",
+    "Confidence": 70
+  },
+  {
+    "phase": "initial_7run",
+    "model": "Gemini 3 Pro",
+    "condition": "E1",
+    "item_id": "P1",
+    "run_id": 1,
+    "Policy_Decision": "Individualized",
+    "Operational_Interval": "Risk-based",
+    "Evidence_Priority": "Mixed",
+    "Confidence": 80
+  },
+  {
+    "phase": "initial_7run",
+    "model": "Gemini 3 Pro",
+    "condition": "E1",
+    "item_id": "P2",
+    "run_id": 1,
+    "Policy_Decision": "Conditional",
+    "Operational_Interval": "NotSpecified",
+    "Evidence_Priority": "RCT",
+    "Confidence": 85
+  },
+  {
+    "phase": "initial_7run",
+    "model": "ChatGPT 5.1 Thinking",
+    "condition": "E2",
+    "item_id": "Q01",
+    "run_id": 1,
+    "Policy_Decision": "Conditional",
+    "Operational_Interval": "NotSpecified",
+    "Evidence_Priority": "Mixed",
+    "Confidence": 92
+  },
+  {
+    "phase": "initial_7run",
+    "model": "ChatGPT 5.1 Thinking",
+    "condition": "E2",
+    "item_id": "Q02",
+    "run_id": 1,
+    "Policy_Decision": "Fixed",
+    "Operational_Interval": "NotSpecified",
+    "Evidence_Priority": "Mixed",
+    "Confidence": 96
+  },
+  {
+    "phase": "initial_7run",
+    "model": "Gemini 3 Pro",
+    "condition": "E2",
+    "item_id": "Q01",
+    "run_id": 1,
+    "Policy_Decision": "Fixed",
+    "Operational_Interval": "NotSpecified",
+    "Evidence_Priority": "Mixed",
+    "Confidence": 95
+  },
+  {
+    "phase": "initial_7run",
+    "model": "Gemini 3 Pro",
+    "condition": "E2",
+    "item_id": "Q03",
+    "run_id": 1,
+    "Policy_Decision": "Conditional",
+    "Operational_Interval": "NotSpecified",
+    "Evidence_Priority": "Mixed",
+    "Confidence": 90
+  }
+]
