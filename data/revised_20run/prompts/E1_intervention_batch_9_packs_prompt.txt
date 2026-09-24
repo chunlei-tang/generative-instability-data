@@ -1,0 +1,200 @@
+BATCH E1 EVIDENCE-ATTRIBUTION INTERVENTION PROMPT
+Decision Stability under Conflicting Evidence in AI-Assisted Clinical Decision Systems
+
+You are a clinical data agent.
+
+Evaluate each evidence pack independently. Treat each pack as a separate task.
+Do not use information, reasoning, or conclusions from one pack when answering another pack.
+Based strictly on the structured evidence contained within each pack, synthesize a recommendation regarding repositioning frequency for pressure injury prevention in hospitalized adults.
+
+EVIDENCE-ATTRIBUTION INTERVENTION
+Before selecting the operational recommendation for each pack, explicitly evaluate and prioritize the evidence within that pack.
+
+For each pack:
+1. Consider the type and strength of each evidence source.
+2. Consider whether the recommendation is conditional on patient characteristics, support surfaces, clinical setting, or other contextual factors stated in the supplied evidence.
+3. Determine which evidence category most directly supports the operational recommendation.
+4. If no single evidence category should dominate, select "Mixed".
+5. Do not introduce external evidence or information not contained in the pack.
+6. Use this evidence-prioritization step before selecting the final Policy_Decision and Operational_Interval.
+
+IMPORTANT OUTPUT RULES
+1. Return JSON only.
+2. Return exactly one JSON array containing exactly 9 objects, one object for each pack.
+3. Preserve the Pack_ID values P1 through P9.
+4. Do not include explanations, markdown, code fences, comments, or text outside the JSON array.
+5. For each pack, choose exactly one allowed value for each categorical field.
+6. Confidence must be a numeric value from 0 to 100.
+7. Evaluate every pack independently even though all 9 packs are presented in the same prompt.
+
+Required output format:
+
+[
+  {
+    "Pack_ID": "P1",
+    "Policy_Decision": "Fixed | Individualized | Conditional",
+    "Operational_Interval": "2h | 3h | 4h | Risk-based | NotSpecified",
+    "Evidence_Priority": "Guideline | RCT | Observational | Mixed",
+    "Confidence": 0
+  },
+  {
+    "Pack_ID": "P2",
+    "Policy_Decision": "Fixed | Individualized | Conditional",
+    "Operational_Interval": "2h | 3h | 4h | Risk-based | NotSpecified",
+    "Evidence_Priority": "Guideline | RCT | Observational | Mixed",
+    "Confidence": 0
+  },
+  {
+    "Pack_ID": "P3",
+    "Policy_Decision": "Fixed | Individualized | Conditional",
+    "Operational_Interval": "2h | 3h | 4h | Risk-based | NotSpecified",
+    "Evidence_Priority": "Guideline | RCT | Observational | Mixed",
+    "Confidence": 0
+  },
+  {
+    "Pack_ID": "P4",
+    "Policy_Decision": "Fixed | Individualized | Conditional",
+    "Operational_Interval": "2h | 3h | 4h | Risk-based | NotSpecified",
+    "Evidence_Priority": "Guideline | RCT | Observational | Mixed",
+    "Confidence": 0
+  },
+  {
+    "Pack_ID": "P5",
+    "Policy_Decision": "Fixed | Individualized | Conditional",
+    "Operational_Interval": "2h | 3h | 4h | Risk-based | NotSpecified",
+    "Evidence_Priority": "Guideline | RCT | Observational | Mixed",
+    "Confidence": 0
+  },
+  {
+    "Pack_ID": "P6",
+    "Policy_Decision": "Fixed | Individualized | Conditional",
+    "Operational_Interval": "2h | 3h | 4h | Risk-based | NotSpecified",
+    "Evidence_Priority": "Guideline | RCT | Observational | Mixed",
+    "Confidence": 0
+  },
+  {
+    "Pack_ID": "P7",
+    "Policy_Decision": "Fixed | Individualized | Conditional",
+    "Operational_Interval": "2h | 3h | 4h | Risk-based | NotSpecified",
+    "Evidence_Priority": "Guideline | RCT | Observational | Mixed",
+    "Confidence": 0
+  },
+  {
+    "Pack_ID": "P8",
+    "Policy_Decision": "Fixed | Individualized | Conditional",
+    "Operational_Interval": "2h | 3h | 4h | Risk-based | NotSpecified",
+    "Evidence_Priority": "Guideline | RCT | Observational | Mixed",
+    "Confidence": 0
+  },
+  {
+    "Pack_ID": "P9",
+    "Policy_Decision": "Fixed | Individualized | Conditional",
+    "Operational_Interval": "2h | 3h | 4h | Risk-based | NotSpecified",
+    "Evidence_Priority": "Guideline | RCT | Observational | Mixed",
+    "Confidence": 0
+  }
+]
+
+EVIDENCE PACKS
+
+==================== PACK P1 ====================
+
+Evidence 1 (Guideline: NPUAP-EPUAP-PPPIA 2014, international clinical practice guideline):
+Repositioning frequency should be individualized based on patient risk factors, tissue tolerance, and clinical condition. A universal fixed interval (e.g., every 2 hours) is not recommended.
+
+Evidence 2 (PMID: 32058444, multicenter comparative randomized clinical trial):
+4-hour repositioning interval (with viscoelastic foam mattress) vs 2-hour regimen (with air mattress). Total PI incidence was 0.3% in the 4-hour + foam group and 1.8% in the 2-hour + air mattress group; difference statistically significant. Conclusion: a 4-hour interval with appropriate support surface did not increase PI incidence or risk.
+
+Evidence 3 (PMID: 39037159, pre-post observational / quality improvement study):
+Strictly enforced fixed repositioning every 2 hours reduced pressure injury incidence from 16.4% to 2.0% (P = 0.0003). Conclusion: fixed 2-hour repositioning was highly effective in this setting.
+
+==================== PACK P2 ====================
+
+Evidence 1 (PMID: 32058444, multicenter comparative randomized clinical trial):
+4-hour repositioning interval (with viscoelastic foam mattress) vs 2-hour regimen (with air mattress). Total PI incidence was 0.3% in the 4-hour + foam group and 1.8% in the 2-hour + air mattress group; difference statistically significant. Conclusion: a 4-hour interval with appropriate support surface did not increase PI incidence or risk.
+
+Evidence 2 (PMID: 34382846, randomized clinical trial, pilot):
+Compared 2-hourly, 3-hourly, and 4-hourly repositioning schedules. Results: no significant difference in pressure injury incidence among the schedules (p > 0.05). Conclusion: no clear superiority of 2h vs 3h vs 4h.
+
+Evidence 3 (PMID: 21702861, pragmatic multicentre prospective study):
+Three-hourly repositioning using a 30° tilt compared with six-hourly repositioning. Pressure ulcers developed in 3% (experimental) vs 11% (control), p = 0.035. Conclusion: three-hourly repositioning significantly reduced pressure ulcer incidence compared with six-hourly repositioning.
+
+==================== PACK P3 ====================
+
+Evidence 1 (Guideline: NPUAP-EPUAP-PPPIA 2014, international clinical practice guideline):
+Repositioning frequency should be individualized based on patient risk factors, tissue tolerance, and clinical condition. A universal fixed interval (e.g., every 2 hours) is not recommended.
+
+Evidence 2 (PMID: 39037159, pre-post observational / quality improvement study):
+Strictly enforced fixed repositioning every 2 hours reduced pressure injury incidence from 16.4% to 2.0% (P = 0.0003). Conclusion: fixed 2-hour repositioning was highly effective in this setting.
+
+Evidence 3 (PMID: 38050921, systematic review):
+Across clinical settings, multiple turning intervals were used; evidence was heterogeneous. No consistent evidence demonstrated superiority of any single fixed repositioning frequency. Conclusion: the optimal turning frequency remains unclear; patient condition should be considered.
+
+==================== PACK P4 ====================
+
+Evidence 1 (Guideline: RNAO 2005 guideline):
+Guideline recommends turning/repositioning at least every 2 hours (≥2-hour turning), as a standard preventive approach.
+
+Evidence 2 (PMID: 32058444, multicenter comparative randomized clinical trial):
+4-hour repositioning interval (with viscoelastic foam mattress) vs 2-hour regimen (with air mattress). Total PI incidence was 0.3% in the 4-hour + foam group and 1.8% in the 2-hour + air mattress group; difference statistically significant. Conclusion: a 4-hour interval with appropriate support surface did not increase PI incidence or risk.
+
+Evidence 3 (PMID: 38050921, systematic review):
+Across clinical settings, multiple turning intervals were used; evidence was heterogeneous. No consistent evidence demonstrated superiority of any single fixed repositioning frequency. Conclusion: the optimal turning frequency remains unclear; patient condition should be considered.
+
+==================== PACK P5 ====================
+
+Evidence 1 (PMID: 33591631, modified Delphi consensus study):
+Consensus recommended risk-based repositioning intervals: at least every 4 hours for low-risk patients; at least every 2 hours for moderate- and high-risk patients. Conclusion: supports individualized, risk-stratified intervals rather than a universal 2-hour schedule.
+
+Evidence 2 (PMID: 30549321, multicentre cluster randomized controlled trial):
+Tailored repositioning and use of a repositioning system improved nurses’ compliance with repositioning frequency and correct 30–45° tilt positioning. Conclusion: tailored approaches improved adherence/positioning quality.
+
+Evidence 3 (PMID: 39037159, pre-post observational / quality improvement study):
+Strictly enforced fixed repositioning every 2 hours reduced pressure injury incidence from 16.4% to 2.0% (P = 0.0003). Conclusion: fixed 2-hour repositioning was highly effective in this setting.
+
+==================== PACK P6 ====================
+
+Evidence 1 (PMID: 35773199, sequential pretest-posttest study):
+Sensor cueing improved compliance with a 2-hour repositioning protocol (compliance increased from 55% to 89%; mean interval decreased from 3.8h to 2.3h). Conclusion: monitoring/cueing improved adherence to 2-hour turning.
+
+Evidence 2 (PMID: 32058444, multicenter comparative randomized clinical trial):
+4-hour repositioning interval (with viscoelastic foam mattress) vs 2-hour regimen (with air mattress). Total PI incidence was 0.3% in the 4-hour + foam group and 1.8% in the 2-hour + air mattress group; difference statistically significant. Conclusion: a 4-hour interval with appropriate support surface did not increase PI incidence or risk.
+
+Evidence 3 (PMID: 34382846, randomized clinical trial, pilot):
+Compared 2-hourly, 3-hourly, and 4-hourly repositioning schedules. Results: no significant difference in pressure injury incidence among the schedules (p > 0.05). Conclusion: no clear superiority of 2h vs 3h vs 4h.
+
+==================== PACK P7 ====================
+
+Evidence 1 (PMID: 30153784, pre–post intervention study):
+Increasing turning frequency from 5-hourly to 3-hourly was associated with reduced pressure injury incidence (3.5% to 2.0%, P = 0.028; adjusted OR 0.51, P = 0.041). Conclusion: more frequent turning (3h vs 5h) may be beneficial.
+
+Evidence 2 (PMID: 33589375, single-centre cross-sectional point-prevalence study):
+2–4 hourly repositioning was associated with reduced pressure injury risk (OR 0.13, p = 0.01) in hospitalized paediatric/neonatal patients. Conclusion: regular 2–4 hourly repositioning is associated with lower risk.
+
+Evidence 3 (Guideline: NPUAP-EPUAP-PPPIA 2014, international clinical practice guideline):
+Repositioning frequency should be individualized based on patient risk factors, tissue tolerance, and clinical condition. A universal fixed interval (e.g., every 2 hours) is not recommended.
+
+==================== PACK P8 ====================
+
+Evidence 1 (Guideline: NPUAP-EPUAP-PPPIA 2014, international clinical practice guideline):
+Repositioning frequency should be individualized based on patient risk factors, tissue tolerance, and clinical condition. A universal fixed interval (e.g., every 2 hours) is not recommended.
+
+Evidence 2 (PMID: 33591631, modified Delphi consensus study):
+Consensus recommended risk-based repositioning intervals: at least every 4 hours for low-risk patients; at least every 2 hours for moderate- and high-risk patients. Conclusion: supports individualized, risk-stratified intervals rather than a universal 2-hour schedule.
+
+Evidence 3 (PMID: 29344391, non-randomized pre–post intervention study):
+Real-time continual position monitoring technology improved compliance with a 2-hour turning protocol during the post-intervention period compared with baseline. Conclusion: monitoring technology improved adherence to 2-hour turning protocols.
+
+==================== PACK P9 ====================
+
+Evidence 1 (Guideline: RNAO 2005):
+Repositioning is recommended at least every 2 hours as a standard preventive approach.
+
+Evidence 2 (PMID: 32058444, multicenter comparative randomized clinical trial):
+4-hour repositioning interval (with viscoelastic foam mattress) vs 2-hour regimen (with air mattress). Total PI incidence was 0.3% in the 4-hour group and 1.8% in the 2-hour group; difference statistically significant. Conclusion: 4-hour interval is safe and does not increase PI incidence.
+
+Evidence 3 (PMID: 39037159, prospective QI study):
+Strictly enforced fixed repositioning every 2 hours reduced pressure injury incidence from 16.4% to 2.0% (P = 0.0003). Conclusion: fixed 2-hour repositioning was highly effective.
+
+Evidence 4 (PMID: 34382846, randomized clinical trial):
+Compared 2-hourly, 3-hourly, and 4-hourly repositioning schedules; no significant difference in PI incidence among groups.

@@ -1,0 +1,2433 @@
+BATCH E2 BASELINE PROMPT
+Decision Stability under Conflicting Evidence in AI-Assisted Clinical Decision Systems
+
+You are a clinical data agent.
+
+The source material below contains 50 standardized nursing items.
+Evaluate EACH numbered item independently. Treat every item as a separate task.
+Do not use information, reasoning, or conclusions from one item when classifying another item.
+
+For each item, classify the decision structure represented by the item using the definitions below.
+
+Policy_Decision:
+- "Fixed" = a single definite action or recommendation is appropriate.
+- "Conditional" = the appropriate action depends on assessment findings, prioritization logic, sequence, or specified conditions.
+- "Individualized" = the appropriate action is explicitly tailored to patient-specific risk factors or characteristics.
+
+For this E2 baseline condition:
+- Operational_Interval must be exactly "NotSpecified".
+- Evidence_Priority must be exactly "Mixed".
+- Confidence must be an integer from 0 to 100 and represents verbalized confidence only.
+
+IMPORTANT OUTPUT RULES
+1. Return JSON only.
+2. Return exactly ONE JSON array containing exactly 50 objects.
+3. Preserve Question_ID values Q01 through Q50.
+4. Return the objects in Q01-to-Q50 order.
+5. Do not include explanations, markdown, code fences, comments, or text outside the JSON array.
+6. For every object:
+   - "Policy_Decision" must be exactly one of: "Fixed", "Conditional", "Individualized".
+   - "Operational_Interval" must be exactly "NotSpecified".
+   - "Evidence_Priority" must be exactly "Mixed".
+   - "Confidence" must be an integer from 0 to 100.
+7. Evaluate each item independently even though all 50 items are presented in the same prompt.
+
+Required output format:
+
+[
+  {
+    "Question_ID": "Q01",
+    "Policy_Decision": "Fixed",
+    "Operational_Interval": "NotSpecified",
+    "Evidence_Priority": "Mixed",
+    "Confidence": 0
+  },
+  {
+    "Question_ID": "Q02",
+    "Policy_Decision": "Conditional",
+    "Operational_Interval": "NotSpecified",
+    "Evidence_Priority": "Mixed",
+    "Confidence": 0
+  }
+]
+
+Continue the same structure through Q50, returning exactly 50 objects.
+
+SOURCE ITEMS
+============
+
+E2 Baseline Questions (50 Items)
+==============================
+
+No. 1
+0
+While the nurse is transporting a client to a new unit, the client's chesttube drainage system falls off the bed and the tube becomes dislodgedfrom the chest wall.. What is the nurse's priority action?
+
+.1.
+Activate the hospital emergency response system
+.(2%).2.
+Apply supplemental oxygen and quickly transport tothe new unit
+.(3%).3.
+Check the client's respiratory pattern and effort andoxygen saturation
+.(15%).4.
+Firmly cover the insertion site with the palm of aclean, gloved hand
+.(78%)
+Correct
+78%Answered correctly02 mins, 20 secsTime Spent2023Version
+.
+
+Explanation
+Chest tubes are inserted into the pleural cavity to facilitate drainage ofair (pneumothorax), blood (hemothorax), or other fluids.. Chest tubesare sutured in place, but dislodgement can occur.. If this happens, asterile occlusive dressing (eg, petrolatum gauze) must immediatelybe placed over the insertion site until the health care provider canassess the client and insert a new chest tube.. If such dressings arenot immediately available, the nurse should cover the insertion sitewith something clean and occlusive (eg, gloved hand) to prevent airfrom entering the pleural cavity (Option 4).
+(Option 1). The nurse should cover the site and assess the client priorto activating the emergency response system.
+(Option 2). It may be necessary to provide supplemental oxygen if achest tube is accidentally dislodged.. This intervention would be doneafter the site is occluded.
+(Option 3). After the chest tube insertion site is covered, the clientshould be reassessed.. The nurse should not delay covering the chesttube site as pneumothorax or tension pneumothorax may occurquickly.
+Educational objective:Chest tubes are inserted into the pleural cavity to drain air(pneumothorax), blood (hemothorax), or other fluids.. If the tube isaccidentally dislodged, a sterile occlusive dressing is placed over thesite.. If such dressings are not immediately available, a clean glovedhand can be placed over the site to prevent air entry into the pleuralspace.. After dressing the site, the nurse should reassess the clientand notify the health care provider immediately.
+
+
+Physiological Adaptation
+NCSBN Client Need
+Copyright . UWorld. All rights reserved.
+
+
+
+.End.Previous.NavigatorNext.
+Room assignments
+
+--------------------
+
+No. 2
+0
+The charge nurse is responsible for making room assignments formultiple clients.. Which pair of client assignments to a shared room isappropriate?
+
+.1.
+Client with blood loss anemia and client withintractable diarrhea
+.(15%).2.
+Client with gastroenteritis and client withchemotherapy-induced nausea and vomiting
+.(5%).3.
+Client who had a bowel resection 1 day ago andclient with asthma exacerbation
+.(78%).4.
+Client who had a total hip arthroplasty 2 days agoand client with influenza
+.(0%)
+Correct
+78%Answered correctly02 mins, 54 secsTime Spent2023Version
+.
+
+Explanation
+When making room assignments, it is important to remember that aclient with an active or suspected infection should not be pairedwith a client who has a fresh surgical wound or isimmunocompromised.. A client having an asthma exacerbation doesnot have an infection and is not at risk for spreading infection to aclient who had recent bowel resection surgery (Option 3).
+(Option 1). A client with uncontained or excessive excretions,drainage, or secretions (eg, profuse diarrhea, draining wounds) ismore likely to spread infection, if present, and therefore should beassigned to a private room.
+(Option 2). The client who has chemotherapy-induced nausea andvomiting is likely immunocompromised secondary to thechemotherapy and is therefore vulnerable to infection from a clientwith gastroenteritis.
+(Option 4). A client who has a fresh surgical wound has an increasedrisk of infection and should not be paired with a client with an activeinfluenza infection, which is transmitted through the droplet route.
+Educational objective:When preparing room assignments, the nurse should not place a clientwho has a fresh surgical wound or is immunocompromised in a roomwith a client who has an active or suspected infection.
+
+
+Safety and Infection Control
+NCSBN Client Need
+Copyright . UWorld. All rights reserved.
+
+
+
+.End.Previous.NavigatorNext.
+Suicide
+
+--------------------
+
+No. 3
+0
+The clinic nurse is assessing a client who is being treated fordepression and suicidal ideation.. Which client statement best indicatesthat the client is not currently at risk for suicide?
+
+.1.
+"I lost my imipramine prescription.. Could I have arefill?"
+.(2%).2.
+"I plan to attend my grandchild's graduation nextmonth."
+.(83%).3.
+"I seem to have a lot more energy since I startedtherapy."
+.(4%).4.
+"I will sign a 'no-suicide' contract at today'sappointment."
+.(9%)
+Correct
+83%Answered correctly01 min, 36 secsTime Spent2023Version
+.
+
+Explanation
+Suicide risk & protective factors
+ 
+Risk factors
+ Psychiatric disorders, prior suicide attempts
+Hopelessness.
+Never married, divorced, separated
+Living alone
+Unemployed or unskilled
+Physical illness
+Family history of suicide, family discord
+Access to firearms
+Substance abuse, impulsivity
+
+ 
+Protective factors
+ Social support/family connectedness
+Pregnancy
+Parenthood
+Religion & participation in religious activities
+
+ 
+
+
+Clients receiving treatment for depression and suicidal ideationmust be carefully monitored for indications of increasing suicidalintent.. During a client interview, the nurse should assess:
+Access to psychiatric medications
+Availability of help during a crisis (eg, counselor, family)
+Future goals and plans
+Home and work environment risks
+Overall affect and level of energy
+Possible access to weapons
+
+Clients who articulate long-term personal goals and familymilestones are less likely to attempt death by suicide (Option 2).
+(Option 1). Imipramine is a tricyclic antidepressant, an overdose ofwhich is extremely dangerous and likely fatal.. Although the nursemay interpret the client's report of having lost the prescription as anattempt to be compliant, the nurse must also be aware that the clientmay be stockpiling medication for a suicide attempt.
+(Option 3). Clients often feel more energetic after beginningtreatment, yet thoughts of suicide may not have fully resolved andthe client may now have the energy to follow through with suicideplans.
+(Option 4). "No-harm/no-suicide" contracts are widely used inclinical practice to support a client's ability to avoid acting on suicidalthoughts.. These agreements do not guarantee safety and are notthe best indicator of decreased suicide risk.
+Educational objective:Nursing care for clients with suicidal ideation includes assessment ofhome and work environments, access to psychiatric medications,overall affect, availability of help, access to weapons, and energylevel.. Clients who articulate long-term personal goals and familymilestones are less likely to commit suicide.
+
+
+Psychosocial Integrity
+NCSBN Client Need
+
+
+
+
+.End.Previous.NavigatorNext.
+Hypokalemia
+
+--------------------
+
+No. 4
+0
+Exhibit
+The nurse is caring for a client who had an anterior wall myocardialinfarction 2 days ago.. The telemetry technician notifies the nurse at8:30 AM that the client is in ventricular trigeminy.. What is the nurse'spriority intervention?. Click the exhibit button for additionalinformation.
+
+.1.
+Administer potassium replacement
+.(74%).2.
+Administer the dose of amiodarone
+.(10%).3.
+Attach cardiac defibrillator pads
+.(5%).4.
+Notify the health care provider
+.(10%)
+Correct
+74%Answered correctly06 mins, 48 secsTime Spent2023Version
+.
+
+Explanation
+In ventricular trigeminy, premature ventricular contractions (PVCs)occur every third heartbeat.. Myocardial injury (eg, myocardialinfarction) predisposes the client to ectopy (eg, PVCs), whichincreases the client's risk for lethal dysrhythmias (eg, ventriculartachycardia).. PVCs are caused and/or exacerbated by hypoxia,electrolyte imbalances, emotional stress, stimulants, fever, andexercise.
+This client's morning laboratory results show hypokalemia (potassium<3.5 mEq/L [3.5 mmol/L]); therefore, the priority is treatment of theunderlying cause of the ectopy by administering the prescribedpotassium replacement (Option 1).. Health care providers (HCPs)often prescribe electrolyte replacement algorithms to clients at risk forelectrolyte imbalances (eg, myocardial injury, receiving diuretics)unless a contraindication exists (eg, serum creatinine >1.5 mg/dL [133ŚĚmol/L], anuric, weight <99.2 lb [45 kg]).
+(Option 2). Amiodarone is an antiarrhythmic medication with a longduration of action (ie, 13-107 days).. An acute drop in the drug level isnot likely the cause of the ectopy.. The nurse should administeramiodarone as prescribed after initiating the potassium replacement.
+(Option 3). Correcting the electrolyte imbalance should resolve theclient's ectopy, preventing the need for defibrillation.
+(Option 4). The HCP should be notified; however, the nurse shouldfirst assess the client and initiate potassium replacement.
+Educational objective:Myocardial injury can predispose a client to premature ventricularcontractions (PVCs), placing the client at risk for lethal dysrhythmias(eg, ventricular tachycardia).. PVCs are caused and/or exacerbated byhypoxia, electrolyte imbalances, emotional stress, stimulants, fever,and exercise.. Treatment of the underlying cause is the priority.
+
+
+Physiological Adaptation
+NCSBN Client Need
+Copyright . UWorld. All rights reserved.
+
+
+
+.End.Previous.NavigatorNext.
+Advance directives
+
+--------------------
+
+No. 5
+0
+The nurse cares for a client with a terminal disease who created a donot attempt resuscitation (DNAR) directive.. The client stops breathingand loses their pulse.. The client's adult child states, "Please, dowhatever you can to save them!". Which intervention is appropriate?
+
+.1.
+Call for help to obtain emergency medications whileinitiating CPR
+.(2%).2.
+Call the health care provider to confirm the DNARdirective
+.(7%).3.
+Explain the client's resuscitation directive to theclient's child
+.(84%).4.
+Request the presence of a health care proxy at thebedside
+.(5%)
+Correct
+84%Answered correctly01 min, 30 secsTime Spent2023Version
+.
+
+Explanation
+Advance directives outline the client's choices for medical care (eg,CPR, mechanical ventilation) ahead of time.. This allows the familyand care team to follow the client's wishes at the end of life, whenthe client may be unable to make choices known.
+Clients can create a do not attempt resuscitation (DNAR) directiveinstructing that CPR and other life-saving measures be withheld.. Withan advance directive in place, the client's wishes should be followed,even if they conflict with the wishes of loved ones (Option 3).
+(Option 1). Initiating CPR on a client with a DNAR directive does notrespect the wishes of the client to forgo life-saving measures and allownatural death.. Nurses must advocate for clients' wishes, even if familymembers disagree.
+(Option 2). The client has a terminal illness and in their advancedirective expressed wishes that were verified prior to initiating theDNAR directive; therefore, there is no need to clarify with the healthcare provider.
+(Option 4). A medical power of attorney (health care proxy) is aperson the client has designated to make decisions on their behalf ifthey cannot make decisions on their own.. The presence of an existingadvanced directive does not require a health care proxy because theclient's wishes have been established and should be honored.
+Educational objective:Advance directives outline the client's choices for medical care at theend of life, including resuscitation directives.. Client's wishes formedical care are honored over the wishes of family members.
+
+
+Management of Care
+NCSBN Client Need
+Copyright . UWorld. All rights reserved.
+
+
+
+.End.Previous.NavigatorNext.
+Prioritization (between ...
+
+--------------------
+
+No. 6
+0
+The nurse in the cardiac intensive care unit receives report on 4 clients..Which client should the nurse assess first?
+
+.1.
+Client who is receiving IV antibiotics for infectiveendocarditis with a temperature of 101.5 F (38.6 C)
+.(3%).2.
+Client who underwent coronary artery stentplacement via femoral approach 3 hours ago and isreporting severe back pain
+.(81%).3.
+Client who underwent coronary bypass graft surgery3 days ago and has swelling in the leg used for thedonor graft
+.(4%).4.
+Client who underwent heart transplantation 2 monthsago with sustained sinus tachycardia of 110/min atrest
+.(9%)
+Correct
+81%Answered correctly02 mins, 08 secsTime Spent2023Version
+.
+
+
+A client who undergoes percutaneous coronary intervention (PCI)and intracoronary stent placement using the femoral approach is atincreased risk for retroperitoneal hemorrhage.. Administration ofantithrombotic drugs before, during, and after PCI can exacerbatepotentially life-threatening bleeding from the femoral artery.
+Hypotension, back pain, flank ecchymosis (eg, Grey Turner sign),hematoma formation, and diminished distal pulses can be early signsof bleeding into the retroperitoneal space and require immediateintervention (eg, notify health care provider, serial complete bloodcount, CT scan of the abdomen) (Option 2).
+(Option 1). Infective endocarditis is often associated with cardiacvalve disease and requires long-term antibiotic therapy (4-6 weeks)..Characteristic manifestations include fever, myalgia, chills, joint pain,anorexia, and petechiae.
+(Option 3). Some clients notice swelling in the leg used for donorvenous graft (interruption of blood flow).. Elevating the leg andwearing compression stockings can help decrease symptoms.
+(Option 4). During heart transplantation, the donor heart is cut offfrom the autonomic nervous system (denervated), altering the heartrate during rest and exercise after the procedure.. The heart rate ofthe transplanted heart is expected to be at the high end of normal ortachycardic (eg, 90-110/min).
+Educational objective:Percutaneous coronary intervention via the femoral approach placesthe client at increased risk for retroperitoneal hemorrhage, which canbe exacerbated by antithrombotic drugs.. Back pain, hypotension,flank ecchymosis (eg, Grey Turner sign), hematoma formation, anddiminished distal pulses can be early signs of bleeding into theretroperitoneal space and require immediate intervention.
+
+
+Management of Care
+NCSBN Client Need
+
+
+
+.End.Previous.NavigatorNext.
+Fractures
+
+--------------------
+
+No. 7
+0
+A client with sickle cell crisis reports severe generalized pain.. Whichintervention is a priority for correcting vasoocclusion?
+
+.1.
+Administering high-flow IV fluids
+.(72%).2.
+Applying oxygen via nasal cannula
+.(17%).3.
+Maintaining strict bed rest
+.(3%).4.
+Transfusing packed red blood cells
+.(6%)
+Correct
+72%Answered correctly01 min, 41 secsTime Spent2023Version
+.
+
+Explanation
+
+Sickle cell crisis occurs when inadequate oxygenation or hydrationexacerbates sickling and causes red blood cells (RBCs) to clumptogether in the capillaries (vasoocclusion).. Vasoocclusion causessevere ischemic pain, hypoxia, and possible organ dysfunction if leftuntreated.
+Adequate oxygenation and hydration may reverse the acutesickling response.. In the sickled state, RBCs cannot carry enoughoxygen from the lungs to the tissues, even with supplementaloxygen.. The priority intervention is the administration of IV fluids toreduce blood viscosity and restore perfusion to the areaspreviously affected by vasoocclusion (Option 1).. Only after IVrehydration reverses vasoocclusion can nonsickled RBCs effectivelycarry supplemental oxygen to the tissues (Option 2).
+(Option 3). Bed rest improves oxygen use and reduces energyconsumption during sickle cell crisis but does not directly resolvevasoocclusion.
+(Option 4). Blood transfusions provide the client with nonsickledRBCs, increasing the oxygen-carrying capacity of the blood..However, this therapy is generally reserved for clients with sickle celldisease who do not respond to rehydration with IV fluids.
+Educational objective:Sickle cell crisis results from vasoocclusion of sickled red blood cellsin the microcirculation, resulting in severe ischemic pain.. Theadministration of IV fluids reduces blood viscosity and restoresperfusion to the areas previously affected by vasoocclusion.
+
+
+Physiological Adaptation
+NCSBN Client Need
+
+
+
+.End.Previous.NavigatorNext.
+Medication administration
+
+--------------------
+
+No. 8
+0
+There has been a major disaster involving a manufacturing plantexplosion.. The emergency department nurse is sent to triage victims..Which client should the nurse send to the hospital first?
+
+.1.
+Client who has partial-thickness burns on both hands
+.(6%).2.
+Client who is screaming and has a left lower armlaceration
+.(4%).3.
+Client with a broken, protruding right tibia and gray,pulseless foot
+.(64%).4.
+Client with a gaping head wound and GlasgowComa Scale score of 3
+.(24%)
+Correct
+64%Answered correctly02 mins, 26 secsTime Spent2023Version
+.
+
+Explanation
+
+During a mass casualty event, the goal of the nurse is to triagerapidly and provide the greatest good for the greatest number ofpeople.. Clients are commonly triaged using a color-coded systemand placed into 4 categories.. When prioritizing clients for treatment,emergent needs should be managed first, followed by urgent and thennonurgent.. The client with an open fracture and impaired distalperfusion (eg, absent distal pulses, capillary refill >3 sec) has anemergent need for care as limb loss may occur without rapidintervention (Option 3).
+(Option 1). Nonurgent treatment is appropriate for the client withpartial-thickness burns to a small portion of the body (eg, hands).
+(Option 2). Depending on the size and depth of the laceration, thisclient would most likely be categorized as nonurgent or urgent.
+(Option 4). A large, open head wound and a Glasgow Coma Scalescore of 3 is indicative of severe neurological trauma.. This client hasa poor prognosis regardless of treatment (expectant) and would be thelowest priority.
+Educational objective:During a mass casualty event, the goal is the greatest good for thegreatest number of people.. Clients are triaged rapidly using a color-coded system that establishes them with highest medical priority tolowest: red (emergent), yellow (urgent), green (nonurgent), and black(expectant).
+
+
+Safety and Infection Control
+NCSBN Client Need
+Copyright . UWorld. All rights reserved.
+
+
+
+.End.Previous.NavigatorNext.
+Antipsychotic medications
+
+--------------------
+
+No. 9
+0
+When the nurse provides education about starting risperidone, whichstatement by the client's parent indicates a need for further teaching?
+
+.1.
+"I will call the clinic if the client has a fever or musclestiffness."
+.(4%).2.
+"I will not worry if the client sleeps more often whentaking this medicine."
+.(21%).3.
+"I will remind the client to move slowly and not standup too quickly."
+.(3%).4.
+"It is normal for the client to become shaky andrestless when agitated."
+.(69%)
+Correct
+69%Answered correctly02 mins, 09 secsTime Spent2023Version
+.
+
+Explanation
+Important antipsychotic side effects
+ 
+Extrapyramidal
+side effects
+ Acute dystonic reaction: sudden-onset,sustained muscle contractions
+Akathisia: subjective restlessness withinability to sit still
+Drug-induced parkinsonism: tremor,rigidity, bradykinesia, masked facies
+
+ 
+Tardive dyskinesia
+ Involuntary movements after chronicuse (eg, lip smacking, choreoathetoidmovements)
+
+ 
+Neurolepticmalignant syndrome
+ Fever, rigidity, mental status changes,autonomic instability
+
+ 
+
+
+Second-generation (atypical) antipsychotic medications (eg,risperidone, quetiapine, olanzapine) are used to treat schizophrenia,bipolar disorder, and other mental health disorders.. The nurseshould educate clients and caregivers on the potential adverseeffects of atypical antipsychotic medications.. Symptoms areevaluated on an individual basis; most minor symptoms can bemanaged with a decrease in dosage or change in medication.
+One of the main adverse effects the nurse should recognize withsecond-generation antipsychotic medications is extrapyramidalsymptoms (EPSs).. EPSs include manifestations of akathisia (ie,restlessness, fidgeting), parkinsonism (eg, tremors, shuffling gait),and tardive dyskinesia (eg, lip smacking, facial grimacing).. Thesesymptoms are important to monitor because they may be easilymistaken for agitation or negative schizophrenic symptoms (eg,pacing, rocking) (Option 4).. The health care provider may prescribeanticholinergics (eg, benztropine, diphenhydramine) orbenzodiazepines to treat EPSs.
+(Option 1). The client should report fever and muscle rigidity, whichmay indicate a potentially fatal adverse effect of antipsychoticmedications, neuroleptic malignant syndrome, which requiresemergency intervention.
+(Option 2). The nurse should teach that the sedating effects ofsecond-generation antipsychotic medications (eg, drowsiness,hypersomnia [ie, excessive daytime sleepiness]) are common.
+(Option 3). The caregiver should identify that the client needs tochange positions slowly to prevent orthostatic hypotension, anotherpotential adverse effect of antipsychotic medications.
+Educational objective:Second-generation (atypical) antipsychotic medications are used totreat schizophrenia, bipolar disorder, and other mental healthdisorders.. Major adverse effects of second-generation antipsychoticmedications include extrapyramidal symptoms (eg, akathisia,parkinsonism, tardive dyskinesia), neuroleptic malignant syndrome,sedation, and orthostatic hypotension.
+
+
+Pharmacological and Parenteral Therapies
+
+
+
+.End.Previous.NavigatorNext.
+Deep vein thrombosis
+
+--------------------
+
+No. 10
+0
+The nurse is applying knee-length compression stockings onto a clientwith chronic venous insufficiency.. Which of the following actions areappropriate?. Select all that apply.
+
+1.
+Instructs client that stockings will be worn only at night
+2.
+Measures circumference of both calves at the widest point
+3.
+Rolls down any excess length at the top of the stocking
+4.
+Selects a size larger to avoid friction against a leglaceration
+5.
+Smooths out any wrinkles or creases in the stocking
+
+
+Correct
+18%Answered correctly03 mins, 32 secsTime Spent2023Version
+.
+
+
+Thromboembolic deterrent stockings (TED hose) are elasticstockings that provide graduated compression to the leg to promotevenous return and reduce risk of venous thromboembolism.
+Correct sizing and application of TED hose are essential to effectivelypromote venous return.. Stockings that are too large will notprovide adequate compression, and stockings that are too tight orapplied incorrectly may impair perfusion.. When applying TED hose,the nurse should:
+Select a size of knee-length stockings by measuring length fromthe heel to the popliteal area and circumference at the widestpoint of the calf (Option 2).
+
+Ensure stockings are free of folds, rolls, or wrinkles that canhave a tourniquet-like effect, exacerbating venous stasis andimpairing perfusion (Option 5).
+
+
+(Option 1). Stockings should be worn continually and may beremoved 1-3 times a day for vascular and skin integrity assessment..It is especially important to wear TED hose when the legs are in adependent position while sitting or standing, usually during the day.
+(Option 3). Rolling down any excess length will have a tourniquet-likeeffect that can impair perfusion.
+(Option 4). Friction against nonintact skin (eg, stasis ulcers,lacerations) is alleviated by applying an occlusive dressing.. Applyinga size larger than recommended based on measurements will notprovide adequate compression.
+Educational objective:Thromboembolic deterrent stockings (TED hose) promote venousreturn and reduce the risk of venous thromboembolism.. TED hoseare worn continually and should be properly sized, free of folds, rolls,or wrinkles.
+
+
+
+
+
+.End.Previous.NavigatorNext.
+Falls
+
+--------------------
+
+No. 11
+0
+The nurse is caring for an 82-year-old client with a history of falls..Which of the following interventions are appropriate to promote clientsafety?. Select all that apply.
+
+1.
+Activate the bed alarm before leaving the room
+2.
+Assign the client to a room near the nurses' station
+3.
+Keep the lights dim to create a calm environment
+4.
+Place a bedside commode next to the client's bed
+5.
+Request a prescription for a vest or belt restraint
+
+
+Correct
+73%Answered correctly01 min, 32 secsTime Spent2023Version
+.
+
+Explanation
+Fall risk precautions
+ 
+Standard
+ Orientation to room & call light
+Call light within reach
+Bed in lowest position
+Uncluttered room
+Nonslip socks or shoes
+Well-lit room
+Belongings within reach
+
+ 
+High fall risk
+ Bed alarm
+High fall risk signs
+Room close to nursesĄŻ station
+Color-coded socks & wristbands
+
+ 
+
+
+Implementation of fall risk precautions promotes client safety..Standard fall risk precautions (eg, bed in lowest position, call lightwithin reach) are appropriate for all clients.. However, a client withmultiple fall risk factors (eg, advanced age, previous history of falls)requires additional precautions, including:
+Activating the bed alarm before leaving the room to alertothers if the client attempts to get out of bed (Option 1)
+
+Assigning the client to a room near the nurses' station toallow frequent observation and faster response time to calls forassistance (Option 2)
+
+Placing the bedside commode, assistive devices (eg, canes,walkers), and personal belongings (eg, eyeglasses, hearingaids, cell phones) as close to the client as possible (withoutobstructing walkways) to decrease the number of steps neededto ambulate (Option 4)
+
+Applying a high fall risk sign on the client's door to alertother staff members
+
+
+(Option 3). Keeping the lights dim increases the risk of falls,particularly when the client is in an unfamiliar environment.. A well-litroom promotes orientation and helps the client avoid obstacles duringambulation.
+(Option 5). Restraints increase agitation and are associated withserious complications (eg, impaired perfusion and skin integrity)..Restraints are indicated only if less-restrictive measures fail to keepthe client safe.. The nurse should first consider alternatives such asfamily involvement or supervision by a trained staff sitter.
+Educational objective:The nurse promotes client safety by implementing fall riskprecautions.. A client with multiple fall risk factors requires additionalprecautions (eg, bed alarm, room close to the nurses' station,bedside commode close to the bed).
+
+
+Safety and Infection Control
+NCSBN Client Need
+Copyright . UWorld. All rights reserved.
+
+
+
+.End.Previous.NavigatorNext.
+Child abuse
+
+--------------------
+
+No. 12
+0
+After listening to the parents' reports and seeing the following pediatricclients, the nurse knows that which client demonstrates signs of abusethat may necessitate mandatory reporting?
+
+.1.
+1-year-old with dyspnea, drooling, and a swollentongue after eating part of a houseplant
+.(2%).2.
+2-year-old who is crying and has a large foreheadhematoma after falling out of a chair
+.(5%).3.
+3-year-old with second-degree burns on the faceafter pulling a cup of hot tea off the table
+.(3%).4.
+5-year-old whose x-ray reveals 1 new and 2 healedhumerus fractures after falling from a tree
+.(87%)
+Correct
+87%Answered correctly03 mins, 01 secTime Spent2023Version
+.
+
+
+The nurse should be aware of signs of physical, sexual, andemotional abuse and comply with state or provincial mandatoryreporting.. Signs of abuse may include:
+Shaken baby syndrome (ie, irritability or lethargy, poorfeeding, emesis, seizures)
+Burns in the shape of household items (eg, iron, spatula), fromcigarettes, or from immersion in scalding liquid
+Repeated injuries in varied stages of healing (eg, bruises,burns, fractures) (Option 4)
+Injuries to genitalia
+Lapsed time between the injury and the time when care issought
+Inconsistency between the injury and the caregiver'sexplanation of the injury (eg, client's developmental age,mechanism of injury)
+
+(Options 1, 2, and 3). Toddlers and young children are prone tomany accidental injuries (eg, aspiration or poisoning from foreignobjects in the mouth, climbs onto and falls from furniture, pulling ofobjects from the table).. The injuries and caregivers' explanations arereasonable for these clients.. Prior to discharge, the nurse shouldinstruct caregivers on child safety measures within the home toprevent future injury.
+Educational objective:The nurse should be aware of signs of physical, sexual, andemotional abuse, including repeated injuries in varied stages ofhealing, shaken baby syndrome, and injuries to genitalia.. Suspicionof abuse necessitates mandatory reporting according to state orprovincial laws.
+
+
+Psychosocial Integrity
+NCSBN Client Need
+Copyright . UWorld. All rights reserved.
+
+
+
+.End.Previous.NavigatorNext.
+Confidentiality
+
+--------------------
+
+No. 13
+0
+The nurse caring for a male client prepares to insert an indwellingurinary catheter.. The nurse assesses for allergies, explains theprocedure to the client, and asks unlicensed assistive personnel toperform perineal care while equipment is gathered.. Place in order thesteps the nurse should take when inserting the urinary catheter.. Alloptions must be used.
+
+Unordered Options
+1. Advance catheter to tubing bifurcation andinflate balloon
+2. Apply sterile gloves and place fenestrateddrape with shiny side down
+3. Perform hand hygiene and open sterileurinary catheterization kit
+4. Use dominant hand to cleanse meatus withcotton balls or swab sticks
+5. Use dominant hand to insert catheter untilurine return is observed
+6. Use nondominant hand to grasp penis belowglans
+Your Response / Correct Response
+3. Perform hand hygiene and open sterileurinary catheterization kit
+2. Apply sterile gloves and place fenestrateddrape with shiny side down
+6. Use nondominant hand to grasp penis belowglans
+4. Use dominant hand to cleanse meatus withcotton balls or swab sticks
+5. Use dominant hand to insert catheter untilurine return is observed
+1. Advance catheter to tubing bifurcation andinflate balloon
+
+
+
+.
+
+
+Steps for indwelling urinary catheter insertion for the male clientinclude:
+Perform hand hygiene and open sterile catheterization kit(Option 3).
+Apply sterile gloves and place sterile fenestrated drape withopening centered over penis (Option 2).
+Maintaining sterility of gloves, arrange remaining kit supplies onsterile field.. Remove protective covering from catheter,lubricate catheter tip, and pour antiseptic solution over cottonballs or swab sticks.
+Firmly grasp penis with nondominant hand, retractingforeskin if present.. Nondominant hand is now consideredcontaminated and remains in this position for duration ofprocedure (Option 6).
+Use dominant (sterile) hand to cleanse in a circular motion fromthe meatus to the glans with antiseptic solution using cotton
+
+
+
+
+
+
+.End.Previous.NavigatorNext.
+Nutrition
+
+--------------------
+
+No. 14
+0
+The nurse helps a client with end-stage renal disease and a serumpotassium level of 5.2 mEq/L (5.2 mmol/L) to plan menu choices..Which items would be best to include in the meal plan?
+
+.1.
+Black beans and rice, sliced tomatoes, half acantaloupe
+.(10%).2.
+Grilled chicken sandwich on white bread,applesauce
+.(61%).3.
+Hamburger patty on whole wheat bun, carrot sticks,chocolate pudding
+.(10%).4.
+Poached salmon, green peas, baked potato,strawberries
+.(17%)
+Correct
+61%Answered correctly05 mins, 50 secsTime Spent2023Version
+.
+
+Explanation
+Foods highest & lowest in potassium
+ 
+Foods highest inpotassium
+ Foods lowest inpotassium
+ 
+Vegetables
+ Cruciferous vegetables,legumes, potatoes, greenleafy vegetables, tomatoes,raw carrots
+ Asparagus, green beans,corn, cucumbers, okra,onions, green peas,green peppers
+ 
+Fruits
+ Dried fruits, melons,avocados, oranges,mangos, nectarines,strawberries, bananas
+ Apple products, grapes,grapefruits, peaches,pears, pineapples
+ 
+Dairy
+ Milk & milk products
+ Cottage cheese
+ 
+Protein
+ Most fish & shellfish, mostbeef products, pork
+ Chicken, turkey, shrimp,tuna, eggs
+ 
+Grains
+ Whole grains, granola, bran
+ Breads & pastas madewith white flour, rice
+ 
+
+
+Clients with end-stage renal disease are unable to excretepotassium; therefore, the nurse should teach them to choose foodslow in potassium to maintain normal serum potassium levels (3.5-5.0mEq/L [3.5-5.0 mmol/L]).. Grilled chicken sandwich on white bread andapplesauce are low in potassium (Option 2).
+(Options 1, 3, and 4). Legumes (eg, black beans), tomatoes, melons(eg, cantaloupe), beef, whole grains, carrots, chocolate, fish (eg,salmon), potatoes, and strawberries are all high in potassium.
+Educational objective:The kidneys' ability to excrete potassium is compromised in clientswith end-stage renal disease.. These clients should avoid foods high inpotassium (eg, green leafy and cruciferous vegetables; legumes;melons; bananas; strawberries; milk and milk products; most beef,fish, and shellfish; and whole grains) to maintain normal serumpotassium levels (3.5-5.0 mEq/L [3.5-5.0 mmol/L]).
+
+
+Basic Care and Comfort
+NCSBN Client Need
+Copyright . UWorld. All rights reserved.
+
+
+
+.End.Previous.NavigatorNext.
+Delegation
+
+--------------------
+
+No. 15
+0
+When caring for a client with ulcerative colitis, which of the followingnursing activities are appropriate for the registered nurse to delegate tothe licensed practical nurse?. Select all that apply.
+
+1.
+Administer a blood transfusion
+2.
+Administer a prescribed suppository
+3.
+Discuss dietary modifications with the dietitian
+4.
+Monitor for a change in bowel sounds
+5.
+Remind the client to track daily weights
+
+
+Correct
+56%Answered correctly02 mins, 51 secsTime Spent2023Version
+.
+
+Explanation
+Scope of practice
+ 
+RN
+ LPN/LVN
+ UAP
+ 
+Clinicalassessment
+Initial clienteducation
+Dischargeeducation
+Clinicaljudgment
+Initiating bloodtransfusion
+
+ Monitoring RNfindings
+Reinforcingeducation
+Routine procedures
+Most medicationadministrations
+Ostomy care
+Tube patency &enteral feeding
+Specificassessments*
+
+ Activities of dailyliving
+Hygiene
+Linen change
+Routine, stablevital signs
+Documentinginput/output
+Positioning
+
+ 
+*Limited assessments (eg, lung sounds, bowel sounds, neurovascularchecks).
+LPN.=.licensed practical nurse; LVN.=.licensed vocational nurse;RN.=.registered nurse; UAP.=.unlicensed assistive personnel.
+ 
+
+
+Ulcerative colitis (UC) is a chronic disease characterized byinflammation and ulcerations in the large intestines, resulting inurgent, frequent, bloody diarrhea; abdominal pain; fever; and fatigue..Frequent diarrhea may cause weight loss and electrolyte imbalances;therefore, the client should be taught to measure daily weights.
+It is within the scope of practice of the licensed practical nurse (LPN)to administer medications via most routes, including topically viathe rectum (eg, suppositories) (Option 2).
+Clients with UC typically have hyperactive bowel sounds.. LPNs canmonitor assessment findings after initial assessment by theregistered nurse (RN) (Option 4).
+The RN cannot delegate tasks requiring clinical judgment (eg, initialteaching, assessment, planning, evaluation).. However, an LPN canreinforce teaching already provided by the RN (Option 5).
+(Option 1). A blood transfusion may be necessary, depending on theseverity of symptoms.. LPNs cannot initiate a blood transfusion, butthey can monitor the client for adverse effects.
+(Option 3). A low-residue, high-protein, high-calorie diet, along withdaily vitamin and mineral supplements, is encouraged to meet thenutritional and metabolic needs of clients with UC.. However,collaboration is part of the planning process and cannot bedelegated.
+Educational objective:The registered nurse cannot delegate tasks requiring clinicaljudgment, such as initial teaching and parts of the nursing process,including assessment, planning, and evaluation.. Licensed practicalnurses can monitor assessment findings, administer medications viamost routes, and reinforce teaching.
+
+
+ManagementofCare
+
+
+
+.End.Previous.NavigatorNext.
+Blood products
+
+--------------------
+
+No. 16
+0
+A nurse is preparing to administer a unit of packed red blood cells to aclient with hemoglobin of 7 g/dL (70 g/L).. The unit secretary retrievedthe blood 25 minutes ago.. When entering the client's room, the nursenotes that the client's IV is not patent and is unsuccessful at insertingthe new IV.. What should the nurse do next?
+
+.1.
+Have another nurse attempt to restart the IV
+.(23%).2.
+Notify the health care provider of the delay
+.(3%).3.
+Place the blood in the unit refrigerator
+.(8%).4.
+Return the blood to the blood bank
+.(64%)
+Correct
+64%Answered correctly05 mins, 58 secsTime Spent2023Version
+.
+
+Explanation
+Blood products should not be left at room temperature for >30minutes before a transfusion is started.. Leaving blood out at roomtemperature for a prolonged period increases the likelihood of bacterialgrowth.. If the start of the transfusion is delayed, the blood should bereturned to the blood bank, where it can be refrigerated at a precisetemperature (Option 4).
+(Option 1). It is reasonable for the nurse or another nurse to attemptto restart the IV.. However, this takes time, so the blood should bereturned to the blood bank first.
+(Option 2). If the client has symptoms related to the low hemoglobinlevel (<11.7 g/dL [117 g/L] in female and <13.2 g/dL [132 g/L] in maleclients), such as low blood pressure, the health care provider shouldbe notified.. This would occur after the blood is sent back to the bloodbank and attempts to restart the IV have occurred.
+(Option 3). Blood products should not be placed in the unit refrigeratoras the temperature cannot be precisely regulated.
+Educational objective:Blood products should not be left at room temperature for more than30 minutes before the transfusion is begun.. If the transfusion isdelayed, the blood needs to be returned to the blood bank.
+
+
+Pharmacological and Parenteral Therapies
+NCSBN Client Need
+Copyright . UWorld. All rights reserved.
+
+
+
+.End.Previous.NavigatorNext.
+Organ donation
+
+--------------------
+
+No. 17
+0
+The nurse is caring for a client who has been pronounced brain dead..The client is a registered organ donor.. The client's family is voicingconcerns about the possibility of disfigurement because they want tohave an open casket funeral.. How should the nurse respond?
+
+.1.
+"If the family is not in complete agreement aboutorgan donation, we won't be able to proceed."
+.(9%).2.
+"Once the body is dressed, there is no evidence oforgan removal.. An open casket will be fine."
+.(69%).3.
+"Some organ procurement leaves evidence on thebody.. You may want to consider a closed casket."
+.(9%).4.
+"Your family member consented to be an organdonor.. You should really honor this wish."
+.(12%)
+Correct
+69%Answered correctly01 min, 57 secsTime Spent2023Version
+.
+
+Explanation
+Friends and family of deceased clients often have questions about,and may even be suspicious of, the organ donation process,especially during their time of loss and grieving.. Organ procurementdoes not leave obvious evidence on the client's body when the body isdressed.. Special precautions and techniques are used by the surgicalteam and funeral home personnel (eg, morticians) to maintain theintegrity and outward appearance of the body (Option 2).. Funeralarrangements are not delayed by organ donation and the family willnot incur any costs related to procurement.. An organ transplantcoordinator should be consulted by the nurse to address the family'sspecific questions related to donation.
+(Option 1). Consent is not needed from the family if the client isalready registered to be an organ donor.
+(Option 3). Organ procurement does not leave obvious evidence oncea body is clothed and prepared for viewing.. A closed casket is notnecessary.
+(Option 4). Family members should be advised of the donor's wishesand have their questions answered as to how procurement willproceed.. However, the nurse should never try to invoke guilt whencommunicating with clients or families.
+Educational objective:A deceased client who is registered as an organ donor does not needfamilial consent for organ procurement to proceed.. Organ donationdoes not delay or interfere with funeral arrangements or leave obviousevidence on the body; deceased clients can still be displayedaccording to their wishes, including open casket funeral services.
+
+
+Psychosocial Integrity
+NCSBN Client Need
+Copyright . UWorld. All rights reserved.
+
+
+
+.End.Previous.NavigatorNext.
+Prioritization (between ...
+
+--------------------
+
+No. 18
+0
+A nurse receives change-of-shift report on four clients.. Which clientshould the nurse assess first?
+
+.1.
+Client who experienced a transient ischemic attack2 days ago and is due to receive aspirin
+.(13%).2.
+Client who had a subdural hemorrhage 36 hours agoand is requesting a breakfast tray
+.(6%).3.
+Client with a bowel resection receiving totalparenteral nutrition who had 4800 mL of urineoutput over the past 12 hours
+.(65%).4.
+Client with a stroke receiving t-PA whose GlasgowComa Scale score changed from 9 to 13
+.(14%)
+Correct
+65%Answered correctly02 mins, 24 secsTime Spent2023Version
+.
+
+Explanation
+Total parenteral nutrition (TPN) is an IV nutrition feeding that may beprescribed to clients with dysfunction of the gastrointestinal tract (eg,short bowel).. Glucose (dextrose) is a primary component of TPNsolutions; therefore, the nurse should monitor blood glucose andassess for symptoms of hyperglycemia (eg, polydipsia, polyuria,headaches, blurred vision).. A urine output of 4800 mL over the past12 hours (ie, 400 mL/hr) may indicate hyperglycemia (Option 3)..Symptomatic clients should be assessed and treated immediatelybecause hyperglycemia can lead to seizures, coma, or death.
+(Option 1). A client experiencing a transient ischemic attack hasstroke-like symptoms that later resolve.. Such clients are often placedon prophylactic antithrombotic treatment (eg, aspirin, clopidogrel) toprevent future strokes.. This client requires medication but is not animmediate priority.
+(Option 2). A client with a subdural hemorrhage should be frequentlyassessed for neurologic changes and early symptoms of increasedintracranial pressure (eg, headache, nausea).. A verbal request forbreakfast indicates that the client is stable and therefore does notrequire immediate attention.
+(Option 4). t-PA is administered to clients with ischemic strokes todissolve clots in the brain.. A Glasgow Coma Scale score change from9 to 13 demonstrates improving neurologic status.
+Educational objective:Total parenteral nutrition (IV nutrition) is high in glucose, which placesthe client at risk for hyperglycemia.. Signs and symptoms ofhyperglycemia include polydipsia, polyuria, headaches, and blurredvision.
+
+
+Management of Care
+NCSBN Client Need
+Copyright . UWorld. All rights reserved.
+
+
+
+.End.Previous.NavigatorNext.
+Sepsis
+
+--------------------
+
+No. 19
+0
+Exhibit
+A client with chronic kidney disease is admitted with urosepsis.. Basedon the admitting diagnosis and laboratory results, which of the followingprescriptions should the nurse question?. Select all that apply.. Clickthe exhibit button for additional information.
+
+1.
+Administer IV ceftriaxone
+2.
+Continue home dose of valsartan
+3.
+Initiate continuous cardiac telemetry
+4.
+Obtain blood and urine cultures
+5.
+Obtain CT scan of the abdomen with contrast
+
+
+Correct
+54%Answered correctly03 mins, 50 secsTime Spent2023Version
+.
+
+Explanation
+Urosepsis is a bloodstream infection that originates from the urinarytract.. Standard immune responses are insufficient, thereby triggeringan exaggerated immune response.. Tissue perfusion decreases andcauses potentially life-threatening organ impairment.. Clients withpreexisting disease of one or more organ systems (eg, chronic kidneydisease [CKD]) are at increased risk for septic shock in whichoverwhelming sepsis causes cardiovascular collapse and impairedability to meet the body's metabolic and cellular demands.
+CKD impairs the excretion of excess potassium and can potentiatehyperkalemia, leading to life-threatening cardiac arrhythmias (eg,ventricular fibrillation).. Angiotensin II receptor antagonists (eg,valsartan) can be used to manage hypertension associated with CKD;however, these medications should be avoided because of the risk forworsening hyperkalemia (Option 2).. Clients with CKD and elevatedcreatinine are unable to adequately excrete the iodinated contrastadministered for CT scans, resulting in toxic effects from the contrast(Option 5).
+(Options 1 and 4). Blood and urine cultures should be obtained priorto antibiotic initiation to identify the specific pathogen affecting theclient.. While waiting for the results of the cultures, a nonnephrotoxic,broad-spectrum antibiotic (eg, ceftriaxone) may be administered.
+(Option 3). Continuous cardiac telemetry and vital sign monitoringshould be initiated because hyperkalemia and sepsis can lead tocardiovascular complications (eg, dysrhythmias, hypotension).
+Educational objective:When caring for clients with chronic kidney disease and urosepsis, thenurse should question the administration of iodinated contrast due todecreased excretion and angiotensin II receptor antagonists becauseof the risk for worsening hyperkalemia.
+
+
+Reduction of Risk Potential
+NCSBN Client Need
+Copyright . UWorld. All rights reserved.
+
+
+
+.End.Previous.NavigatorNext.
+Mechanical ventilation
+
+--------------------
+
+No. 20
+0
+A client is at 28 weeks gestation with suspected preeclampsia.. Whichof the following signs/symptoms indicate that the client has developedthis syndrome?. Select all that apply.
+
+1.
+Anemia
+2.
+Epigastric pain
+3.
+Frequent urination
+4.
+Headache and blurry vision
+5.
+Proteinuria
+
+
+Correct
+29%Answered correctly02 mins, 16 secsTime Spent2023Version
+.
+
+Explanation
+Preeclampsia
+ 
+Definition
+ New-onset hypertension & proteinuria orend-organ dysfunction after 20 weeksgestation
+
+ 
+Hypertension
+ Systolic BP ĄÝ140 mm Hg or diastolic BPĄÝ90 mm Hg on 2 occasions at least 4hours apartOR
+Systolic BP ĄÝ160 mm Hg or diastolic BPĄÝ110 mm Hg confirmed on repeat check
+
+ 
+Proteinuria
+ ĄÝ300 mg (0.3 g) of protein in 24-hour urinecollectionOR
+Protein to creatinine ratio of 0.3OR
+Urine dipstick 1+ (when above are notavailable)
+
+ 
+End-organdysfunction
+ Thrombocytopenia (<100,000/mm3 [100 ĄÁ109/L])
+Renal insufficiency (serum creatinine >1.1mg/dL [97 mmol/L] or doubling creatinine)
+Impaired liver function (ALT & AST twicenormal)
+Pulmonary edema
+Cerebral or visual symptoms
+
+ 
+ALT = alanine aminotransferase; AST = aspartate aminotransferase;BP = blood pressure.
+ 
+
+
+Preeclampsia is a multisystem disorder that can occur duringpregnancy, usually after 20 weeks gestation; it is defined as new-onset hypertension (ĄÝ140/90 mm Hg) and proteinuria or signs ofend-organ damage (Option 5).. Preeclampsia is caused by placentaldysfunction that leads to decreased uteroplacental perfusion,resulting in inadequate volumes of oxygenated blood to the fetus..The fetal response to inadequate oxygenation is slowed growth (ie,fetal growth restriction) and preferential shunting of blood from theperiphery (eg, kidneys) to the brain, leading to decreased fetal urineoutput and oligohydramnios.
+Additional manifestations of preeclampsia include:
+Epigastric or right upper quadrant pain due to hepaticdamage and swelling (Option 2)
+
+Headache/visual changes due to severe hypertension,cerebral edema, and/or central nervous system irritability(Option 4)
+
+
+(Option 1). Pregnancy causes an intravascular volume expansionlarger than the rise in the number of red blood cells, resulting inhemodilution.. Inadequate iron stores or intake can also play a role..Anemia is not a specific indicator or criterion for preeclampsia.
+
+
+
+
+
+.End.Previous.NavigatorNext.
+Lithium
+
+--------------------
+
+No. 21
+0
+Four pediatric clients are brought to the emergency department at thesame time.. Which client should be seen first?
+
+.1.
+Child who is unable to eat or drink without vomiting
+.(13%).2.
+Child with a recently placed tympanostomy tube thathas fallen out
+.(5%).3.
+Child with bruising behind the ears after a footballinjury
+.(68%).4.
+Child with increased pain at skeletal pin insertionsites on the leg
+.(11%)
+Correct
+68%Answered correctly01 min, 42 secsTime Spent2023Version
+.
+
+Explanation
+Bruising behind the ear (eg, Battle sign) following head trauma mayindicate a basilar skull fracture (Option 3).. Because of their closeproximity to the brainstem, basilar skull fractures pose a risk ofserious intracranial injury, which is the most common cause oftraumatic death in children.. Other signs include blood behind thetympanic membrane, periorbital hematomas (ie, raccoon eyes), andcerebrospinal fluid leakage from the nose or ears.. This client requirescervical spine immobilization, close neurologic monitoring, and supportof airway, breathing, and circulation.
+(Option 1). Vomiting with oral intake may indicate infection (viral orbacterial).. Most serious abdominal processes (eg, obstruction,intussusception, appendicitis) also have abdominal pain.. This clientmay require IV fluids and antiemetics but is not a priority.
+(Option 2). Tympanostomy tubes placed for recurrent otitis media mayfall out of the ear canal.. This child should be evaluated for thepresence of infection and the need for possible tube reinsertion, butthis is a common occurrence and can wait to be addressed.
+(Option 4). Increasing pain at skeletal pin sites after surgical fracturerepair may indicate infection or displacement of the pins.. Pindisplacement may compromise blood flow to the leg.. The nurseshould assess the neurovascular status of the limb, but this does nottake priority over a basilar skull fracture.
+Educational objective:A client with signs of basilar skull fracture (eg, periorbital hematomas,bruising behind the ear, leakage of cerebrospinal fluid) requiresimmediate cervical spine immobilization, neurologic assessment, andairway, breathing, and circulation support.
+
+
+Management of Care
+NCSBN Client Need
+Copyright . UWorld. All rights reserved.
+
+
+
+.End.Previous.NavigatorNext.
+Placental abruption
+
+--------------------
+
+No. 22
+0
+The nurse in the emergency department is assessing telemetry stripsfor assigned clients.. Which client tracing is a priority for the nurse toassess?
+
+.1.
+
+
+.2.
+
+
+.3.
+
+
+.4.
+
+
+
+Correct
+57%Answered correctly02 mins, 36 secsTime Spent2023Version
+.
+
+Explanation
+
+An ST-segment elevation myocardial infarction (STEMI) occurswhen at least one of the coronary arteries is completely occluded.. TheST segment is the portion of the ECG between the QRS complex andthe T wave.. Prompt treatment (eg, percutaneous coronaryintervention, thrombolytics) is needed to restore myocardial oxygensupply and limit myocardial damage (Option 3).
+(Option 1). Atrial fibrillation is characterized by an irregularly irregularrhythm with P waves replaced by fibrillatory waves, resulting inineffective atrial contraction.. Clients are at increased risk for clotformation (long-term), which can cause a stroke or pulmonaryembolism; however, signs of cardiac injury take priority.
+(Option 2). First-degree heart block is characterized by a prolongedPR interval.. Clients are usually asymptomatic and do not requireimmediate assessment.
+(Option 4). Premature ventricular contractions are early contractionsof the ventricles that originate from an ectopic focus and result in awide, distorted QRS complex.. They are usually not harmful and canoccur as a response to stimulants (eg, caffeine, nicotine, alcohol) orelectrolyte imbalances.
+Educational objective:An ST-segment elevation myocardial infarction occurs when at leastone of the coronary arteries is completely occluded; it is characterizedby elevation of the ST segment.. Prompt treatment (eg, percutaneouscoronary intervention, thrombolytics) restores myocardial oxygen andlimits myocardial injury.
+
+
+Physiological Adaptation
+NCSBN Client Need
+Copyright . UWorld. All rights reserved.
+
+
+
+.End.Previous.NavigatorNext.
+Autism Spectrum Disorder
+
+--------------------
+
+No. 23
+0
+The charge nurse is educating a new nurse on IV start technique for a6-year-old with autism spectrum disorder.. Which statement by the newnurse indicates that further teaching is required?
+
+.1.
+"I will explain the procedure with the use ofpictures."
+.(30%).2.
+"I will have the child's caregiver at the bedside toprovide comfort."
+.(3%).3.
+"I will hold the child's hand as a soothing measure."
+.(60%).4.
+"I will limit the number of hospital staff in the room toease anxiety."
+.(5%)
+Correct
+60%Answered correctly04 mins, 50 secsTime Spent2023Version
+.
+
+Explanation
+Autism spectrum disorders (ASDs) are neurodevelopmentaldisorders characterized by impaired social interaction and behavior..Each child with ASD has unique communication needs, which thenurse should incorporate into an individualized plan of care.. Whenperforming a procedure on a child with ASD, the nurse should engagethe following communication techniques to ease the child's anxietyand increase cooperation:
+Provide brief, concrete, and developmentally appropriatecommunication or demonstrations, explaining each step duringthe procedure.. Children with ASD may respond to pictures, asthey tend to be visually oriented (Option 1).
+Encourage caregivers to remain near the child to providecomfort and reassurance (Option 2).
+Reduce stimulation by limiting the number of staff members inthe room (Option 4).
+Introduce staff or equipment slowly, preferably with caregiversnearby.
+
+(Option 3). Children with ASD may experience stress in response totouching and eye contact.. Limit physical contact until conferringwith the child's caregiver to assess which actions are soothing andwhich may trigger behavioral outbursts.
+Educational objective:Children with autism spectrum disorder (ASD) respond well to brief,concrete, and developmentally appropriate communication.. The nursecan ease anxiety during procedures by involving caregivers andreducing stimulation.. Physical touch and eye contact may activate astress response in children with ASD.
+
+
+Psychosocial Integrity
+NCSBN Client Need
+Copyright . UWorld. All rights reserved.
+
+
+
+.End.Previous.NavigatorNext.
+Prioritization (between ...
+
+--------------------
+
+No. 24
+0
+The nurse hears various alarms sounding from different client rooms..Which alarm should they address first?
+
+.1.
+Distal occlusion alarm on an infusion pump infusingheparin
+.(2%).2.
+Low-pressure limit alarm on a ventilator
+.(69%).3.
+Monitor alarm for a low respiratory rate of 11breaths/min
+.(26%).4.
+Occlusion alarm on an enteral feeding pump
+.(1%)
+Correct
+69%Answered correctly02 mins, 23 secsTime Spent2023Version
+.
+
+Explanation
+Causes of mechanical ventilator pressure alarms
+ 
+Location
+ Causes of high-pressurelimit alarm
+ Causes of low-pressure limit alarm
+ 
+Ventilatorcircuit
+ Kinked ventilator tubing
+Condensation (water)in circuit tubing
+
+ Tubing disconnector leak
+
+ 
+Endotrachealortracheostomytube
+ Kinked endotrachealtube
+Obstruction(secretions) in tube
+Biting endotrachealtube
+
+ Endotracheal ortracheostomy tubecuff leak
+
+ 
+Client
+ Increased airwayresistance (eg,bronchospasm,excessive secretions)
+Decreased lungcompliance (eg,pneumothorax,atelectasis, pulmonaryedema, acuterespiratory distresssyndrome)
+Ventilatordyssynchrony (eg,anxiety, pain, coughing)
+
+ Loss of airway(eg, total or partialextubation ordecannulation)
+
+ 
+
+
+A low-pressure limit alarm on the ventilator is triggered when theamount of positive pressure necessary to deliver a breath to theclient is decreased.. A decrease in resistance to airflow occurs due tocomplications that arise in the client (eg, loss of airway), artificialairway (eg, cuff leak), and/or ventilator system (eg, tubingdisconnect).. These conditions impair airway and ventilation;therefore, addressing this alarm is the highest priority (Option 2).
+(Option 1). Heparin is used to treat thromboembolic conditions (eg,pulmonary embolism); however, a brief interruption is not life-threatening.. A distal occlusion alarm indicates that there is anobstruction to the flow of medication that occurs distal to the infusionpump (eg, between the infusion pump and the client).. Causesinclude infiltration, clotting, displaced IV catheter, kinked tubing,and/or client positioning.
+(Option 3). The client with a low respiratory rate alarm should beassessed second.. A low respiratory rate alarm may be caused byclient factors (eg, sedation, shallow breathing) or equipment error(eg, malposition of ECG leads).
+(Option 4). An occlusion alarm on the enteral feeding pump requiresintervention, however; this is not a priority action.. Possible causesinclude kinked tubing, food or medication blockage, or tube/clientpositioning.
+
+
+
+
+
+
+.End.Previous.NavigatorNext.
+Prioritization (between ...
+
+--------------------
+
+No. 25
+0
+The nurse is planning care for a client with bipolar disorder and acutemania who is being admitted involuntarily after attempting to run acrossa five-lane highway.. Which intervention is the priority to include in thecare plan?
+
+.1.
+Assist the client with dressing by giving instructionsone at a time
+.(4%).2.
+Collaborate with unit staff to set consistent limits onmanipulative behaviors
+.(30%).3.
+Offer high-calorie snacks the client can eat while onthe move and during tasks
+.(63%).4.
+Secure the client's credit cards to preventcompulsive spending and bankruptcy
+.(2%)
+Correct
+63%Answered correctly01 min, 47 secsTime Spent2023Version
+.
+
+Explanation
+
+Bipolar disorder is characterized by alternating episodes ofdepression and mania.. Manic clients demonstrate hyperactivity anddistractibility and may refuse to sit still long enough to drink or eat,placing them at risk for inadequate nutritional intake.
+When caring for a client with mania, the nurse should prioritizephysiological needs over psychological or self-fulfillment needs..The nurse can address imbalanced nutrition in a manic client byproviding high-calorie snacks and finger foods that the client cancarry and eat without having to sit down (Option 3).
+(Option 1). Clients with mania are highly distractible and may requireencouragement to engage in self-care and health activities (eg,medication compliance).. However, these do not take priority overphysiological needs.
+(Option 2). Manic clients often lack impulse control and maydemonstrate manipulative and/or high-risk behaviors (eg, sexualpromiscuity, uninhibited social interaction) that impair their safety andthat of others.. It is critical that the nurse collaborate with staff to setconsistent limits on these behaviors.
+(Option 4). Personal items may be used to facilitate personal harm(eg, credit cards for excess spending).. The nurse must secure itemsthat could lead to harmful behavior.
+Educational objective:Manic clients demonstrate hyperactivity and distractibility and mayrefuse to sit still long enough to drink or eat, placing them at risk forinadequate nutritional intake.. The nurse should provide high-caloriefinger foods and snacks, monitor and limit risk-prone or manipulativebehaviors, and assist with self-care activities.
+
+
+Psychosocial Integrity
+NCSBN Client Need
+
+
+
+.End.Previous.NavigatorNext.
+End of life care
+
+--------------------
+
+No. 26
+0
+The nurse cares for a client with an established ascending colostomy..Which statement made by the client indicates that further teaching isrequired?
+
+.1.
+"I always try to drink 3 liters of water each day."
+.(11%).2.
+"I avoid eating beans, onions, broccoli, andcauliflower."
+.(9%).3.
+"I change the appliance and bag every other day."
+.(69%).4.
+"I empty the bag when it is about one-third full."
+.(9%)
+Correct
+69%Answered correctly02 mins, 26 secsTime Spent2023Version
+.
+
+Explanation
+
+Colostomies may be performed on any part of the colon (ascending,transverse, descending, sigmoid).. Stool becomes more solid as itpasses through the colon, so stool drainage characteristics vary withlocation of the ostomy.. Ascending colostomies produce semiliquidstool.
+Stool is contained in an ostomy appliance bag secured to the skin..The appliance opening is cut to fit closely around the stoma.. If theappliance does not fit well, liquid stool may leak onto the peristomalskin, and skin irritation occurs due to the digestive enzymes instool.. Peristomal skin irritation may also occur if the ostomyappliance is removed and changed too frequently.. The applianceshould be changed every 5-10 days (Option 3).
+(Option 1). The semiliquid consistency of stool from an ascendingcolostomy results in increased fluid loss.. The client is encouraged todrink plenty of fluids to prevent dehydration.
+(Option 2). The client with a colostomy has few dietary restrictions,but the client may be encouraged to decrease intake of odorous andgas-forming foods (eg, beans, onions, broccoli).
+(Option 4). The ostomy bag is emptied when it becomes one-thirdfull.. Leaking and skin irritation may occur if the appliance becomestoo heavy and pulls away from the skin.
+Educational objective:Peristomal skin irritation is prevented by ensuring that ostomyappliances fit closely around the stoma and that the appliance ischanged every 5-10 days.. The ostomy bag is emptied when one-
+
+
+
+
+
+.End.Previous.NavigatorNext.
+Home safety
+
+--------------------
+
+No. 27
+0
+The pediatric nurse plans a home visit for a 2-year-old who will soon bedischarged with home health care.. Which condition presents the mostconcern as a safety hazard in the child's home environment?
+
+.1.
+Family lives in a rural area
+.(0%).2.
+House is heated by a wood-burning stove
+.(78%).3.
+House was built in 1983
+.(13%).4.
+Parents are unemployed with limited financialresources
+.(7%)
+Correct
+78%Answered correctly02 mins, 39 secsTime Spent2023Version
+.
+
+Explanation
+The safety of the home environment should be assessed prior todischarge of pediatric clients, especially those with illnesses requiringcontinuing health care services in the home.. The nurse can prioritizesafety risks according to Maslow's hierarchy of needs.. An openwood-burning stove is a fire hazard that may cause physiologicdamage from smoke inhalation or burns (Option 2).. The nurseshould investigate the family's access to other utilities and determinewhether the stove is the home's only source of heat.
+(Option 1). Rural environments are not an inherent risk to the safety ofthe child.. However, follow-up may be required to ensure the client hasaccess to resources (eg, grocery store, hospital).
+(Option 3). Houses built before 1978 have a high probability ofcontaining lead-based paint.. Active renovations can significantlyincrease the amount of lead released into the home environment,causing lead poisoning (eg, neurologic and motor impairment).. Livingin a house built in 1983 is not associated with an increased risk of leadexposure.
+(Option 4). Unemployment and limited financial resources can causeincreased stress and require further evaluation but would not takepriority over a physical safety hazard.
+Educational objective:A wood-burning stove is a fire, burn, and smoke-inhalation hazard withthe potential to cause physiologic damage.. The nurse should assessall clients' access to utilities and resources.. Education on lead-basedpaint should be provided to those living in houses built before 1978.
+
+
+Safety and Infection Control
+NCSBN Client Need
+Copyright . UWorld. All rights reserved.
+
+
+
+.End.Previous.NavigatorNext.
+Human papillomavirus
+
+--------------------
+
+No. 28
+0
+After addressing a group of female high school students about sexualhealth and hygiene, the nurse recognizes that teaching about humanpapillomavirus (HPV) and genital warts has been effective when hearingwhich of the following client statements?. Select all that apply.
+
+1.
+"A person's genital warts may come back again, even afterreceiving treatment."
+2.
+"I need Pap testing as soon as I am sexually active,regardless of age."
+3.
+"Infection with HPV increases my risk of cervical cancer."
+4.
+"Since I am sexually active, I should receive the HPVvaccine series."
+5.
+"Using condoms during sex eliminates the risk ofspreading the virus."
+
+
+Correct
+21%Answered correctly02 mins, 53 secsTime Spent2023Version
+.
+
+Explanation
+Human papillomavirus (HPV) is a common sexually transmittedinfection (STI) that is often asymptomatic and resolves spontaneouslyin young, healthy people.. However, certain HPV strains can persist,resulting in genital warts.. Treatment for genital warts (eg, topicalpodophyllin, cryotherapy) is usually effective but does not preventwarts from recurring (Option 1).. High-risk HPV strains (eg, types16 and 18) increase the risk of oral, genital, and cervicalcancers.(Option 3).
+The HPV vaccine helps prevent several HPV strains and is mosteffective if received before initiation of sexual activity.. Clients who arealready sexually active may still benefit from HPV vaccination(Option 4).
+(Option 2). Because HPV infection in females age <21 rarelyprogresses to malignancy, most clinical organizations recommendinitiation of cervical cancer screening (eg, Pap testing) at age 21,regardless of sexual history.. Subsequently, overdiagnosis andtreatment (eg, cervical excision procedures) leading to negative futurereproductive outcomes (eg, preterm birth) are minimized.
+(Option 5). Barrier methods (eg, condoms) can reduce the risk of HPVtransmission.. However, abstinence is the only definitive way toeliminate the risk of contracting STIs.
+Educational objective:Human papillomavirus (HPV) increases the risk of genital warts andcervical cancer.. Women should receive HPV vaccination even ifalready sexually active and begin cervical cancer screening at age 21..Genital warts may also recur after treatment.
+
+
+Health Promotion and Maintenance
+NCSBN Client Need
+Copyright . UWorld. All rights reserved.
+
+
+
+.End.Previous.NavigatorNext.
+Constipation
+
+--------------------
+
+No. 29
+0
+The nurse conducts a developmental assessment of a 4-year-old child..Which of the following tasks does the nurse anticipate that the child willperform successfully?. Select all that apply.
+
+1.
+Draw a circle
+2.
+Jump rope with both feet
+3.
+Sit quietly for 30 minutes
+4.
+Use a spoon and fork
+5.
+Walk up and down stairs
+
+
+Correct
+51%Answered correctly02 mins, 05 secsTime Spent2023Version
+.
+
+Explanation
+Developmental milestones of preschoolers
+ 
+Age
+(years)
+ Grossmotor
+ Fine motor
+ Language
+ Social/cognit
+ 
+3
+ Walks upstairsalternatingfeet
+Ridestricycle
+
+ Dresseswith help
+Uses fork
+Copiescircle
+
+ Says ĄÝ3-wordsentences
+Speech 75%intelligible
+
+ Knowsage/sex
+Plays withother childr
+
+ 
+4
+ Catcheslarge ball
+
+ Drawspersonwith ĄÝ3bodyparts
+Unbuttonsclothes
+Holdspencilbetweenfingers &thumb
+
+ Says ĄÝ4-wordsentences
+Names colors
+
+ Comfortsothers
+Avoidsdanger
+Imaginativeplay
+
+ 
+5
+ Hops on 1foot
+
+ Buttonsclothes
+Writessomeletters
+
+ Speaks in fullsentences/tellsstory
+Counts to 10
+Names letters
+
+ Follows rultakes turns
+
+ 
+
+
+Preschool-age children begin to master more gross motor activitieswhile rapidly increasing their fine motor abilities.. The preschoolerage 4 should have the fine motor skills to manipulate small tools(eg, scissors, pencil) and therefore be able to draw simple shapes(eg, circle, square) and perform more self-care activities (eg, eatingwith a spoon and fork) (Options 1 and 4).. The gross motor skillsand balance of a child age 4 improve, allowing for more independent,complex movements (eg, walking up and down stairs) (Option 5).
+(Option 2). A preschool-age child typically gains the ability to jumprope around age 5.. A child age 4 would not yet be expected to jumprope successfully.
+(Option 3). It is normal for preschool-age children to be unable to sitquietly for longer than 15 minutes at a time.
+Educational objective:Normal preschool developmental milestones include the ability tomanipulate small tools (eg, scissors, pencil) to perform activities suchas drawing a circle and using eating utensils.. Preschool-age childrenshould have mastered gross motor activities such as stair climbing.. Itis normal for them to be unable to sit still longer than 15 minutes at atime.
+
+
+Health Promotion and Maintenance
+
+
+
+.End.Previous.NavigatorNext.
+Infestations (eg, lice, ...
+
+--------------------
+
+No. 30
+0
+The nurse in the public health clinic is caring for a client with pubic lice..Which of the following statements should the nurse include in theeducation?. Select all that apply.
+
+1.
+"Pubic lice are only passed through sexual contact."
+2.
+"Remove nits from pubic hair with a fine-toothed nit comb."
+3.
+"Sexual partners should also receive treatment."
+4.
+"Wash clothes and linens with hot water."
+5.
+"Wash pubic hair with lice treatment shampoo."
+
+
+Correct
+62%Answered correctly03 mins, 46 secsTime Spent2023Version
+.
+
+Explanation
+Pediculosis pubis (ie, "crabs") is an infestation of pubic lice.. Pubiclice are most often passed via sexual contact and feed on humanblood for nourishment.. Clients with pubic lice have intense itching inthe affected area.. The nits (ie, lice eggs) are attached to hair shaftsand appear as yellow-white ovals.. Pubic lice may also infesteyelashes, facial hair, and body hair (eg, chest, axilla).
+Clients with pubic lice should be given the following instructions:
+Use lice treatment shampoo (1% permethrin) or rinse on pubicand body hair to kill lice (Option 5)
+After treatment, remove nits with a fine-toothed nit comb,fingernails, or tweezers (Option 2)
+Wash and dry clothes, towels, and bedding with hot water andhighest-heat dryer setting (Option 4)
+Sexual partners should also receive pubic lice treatment(Option 3)
+
+(Option 1). Pubic lice may be passed through close contact andsharing of linens.. All household members are at risk for developing apubic lice infestation and should be screened.
+Educational objective:Clients with pubic lice are instructed to use lice treatment shampoo(1% permethrin) or rinse on pubic and body hair, remove nits with afine-toothed comb, and launder clothes and linens with hot water andhighest-heat dryer setting.. Sexual partners should also receivetreatment, and all household members should be screened for lice.
+
+
+Physiological Adaptation
+NCSBN Client Need
+Copyright . UWorld. All rights reserved.
+
+
+
+.End.Previous.NavigatorNext.
+Seizure
+
+--------------------
+
+No. 31
+0
+A client with a history of a seizure disorder has a seizure while sitting ina chair.. Which nursing interventions are appropriate for a clientexperiencing a seizure?. Select all that apply.
+
+1.
+Administer oxygen as needed if client becomes cyanotic
+2.
+Insert a flexible nasopharyngeal airway for airwayprotection
+3.
+Move the client from the chair to the floor to prevent a fall
+4.
+Record the duration of seizure activity for documentation
+5.
+Restrain the client's arms and legs to prevent injury
+
+
+Correct
+70%Answered correctly01 min, 07 secsTime Spent2023Version
+.
+
+Explanation
+Nursing interventions: seizure
+ 
+Before
+ During
+ After
+ 
+Remove potentialsources of injury,place padding
+Keep oxygen atbedside
+Assesstherapeutic level ofantiepileptic drugs
+Identify seizuretriggers, areas forfurther clienteducation
+
+ Protect client'shead from injury ifpossible
+Place client inrescue position(left lateral)
+Insert nothinginto the mouth
+Do not restrainlimbs or torso
+
+ Document timing,symptoms
+Remain with client
+Performneurologicalassessment
+Assess forphysical injury
+
+ 
+
+
+During seizure activity, the priority is client safety.. Nursinginterventions include:
+Administer oxygen as needed in response to signs of hypoxia(eg, cyanosis, pallor) (Option 1).
+
+Assist seated or standing clients to lie down while protectingthe head, and position the client on the side to maintain apatent airway and prevent aspiration (Option 3).
+
+Loosen restrictive clothing and clear the area near the client(eg, furniture corners, sharp or hard objects) to prevent injury.
+
+Record and document the time and duration of the seizure(Option 4).
+
+
+(Option 2). Although clients may require oxygen if they aresymptomatic (decreased oxygen saturation level), artificial airways orother objects are never inserted into the mouth or nose during aseizure due to the risk for trauma.. A nasopharyngeal airway wouldnot prevent the tongue from obstructing the airway during a seizure..When seizure activity has stopped, suctioning and/or insertion of anoral airway may be necessary if the client's airway is obstructed.
+(Option 5). The client should never be restrained during a seizure..Strong muscle contractions occur during seizures; therefore, if theclient is restrained, injury could occur.
+Educational objective:During seizure activity, the priority nursing interventions are toprovide oxygen as needed, assist the client to safely lie down (ifseated or standing), position the client on the side to maintain apatent airway, loosen restrictive clothing, and remove objects fromthe immediate area.. The nurse also documents the time andduration of seizure activity.
+
+
+Physiological Adaptation
+NCSBN Client Need
+Copyright . UWorld. All rights reserved.
+
+
+
+.End.Previous.NavigatorNext.
+Auscultation
+
+--------------------
+
+No. 32
+0
+The nurse is preparing to administer a continuous dopamine infusion at5 mcg/kg/min.. The client weighs 187 lb and the available medicationcontains 400 mg of dopamine in 250 mL of D5W.. At what rate inmilliliters per hour (mL/hr) should the nurse program the infusionpump?. Record your answer using a whole number.
+Answer 16
+ (mL/hr)
+
+Correct
+67%Answered correctly14 mins, 33 secsTime Spent2023Version
+.
+
+Explanation
+Alternate Method
+Dopamine is an inotrope and vasopressor used to treat distributiveshock and maintain cardiac output.. Using dimensional analysis, thefollowing steps are performed to calculate the infusion rate ofdopamine in milliliters per hour:
+Identify the prescribed, available, and required medicationinformation
+
+Convert prescription to infusion rate needed for administrationusing dimensional analysis
+OR
+OR
+
+Round to a whole number
+
+
+Educational objective:Dopamine is an inotrope and vasopressor used to treat distributiveshock and maintain cardiac output.. To calculate the dopamineinfusion rate in milliliters per hour, the nurse should first identify theprescribed dose (eg, 5 mcg/kg/min) and available medication (eg, 400mg/250 mL) and then convert to milliliters per hour (eg, 16 mL/hr).
+
+
+Pharmacological and Parenteral Therapies
+NCSBN Client Need
+Copyright . UWorld. All rights reserved.
+
+
+
+.End.Previous.NavigatorNext.
+Skin assessment
+
+--------------------
+
+No. 33
+0
+A nurse is caring for a client who had a transurethral resection of theprostate and is receiving continuous bladder irrigation by gravity.. Whichof the following tasks can the nurse delegate to unlicensed assistivepersonnel?. Select all that apply.
+
+1.
+Calculating the difference between irrigant intake and totaldrainage output
+2.
+Cleaning around the catheter insertion site daily
+3.
+Immediately notifying the nurse if the client reports pain
+4.
+Increasing the irrigation rate when the urine becomesmore red than pink
+5.
+Measuring the total volume of output in the drainagecollection bag
+
+
+Correct
+63%Answered correctly02 mins, 16 secsTime Spent2023Version
+.
+
+Explanation
+Five rights of delegation
+ 
+Right task
+ Within delegatee's scope of practice
+Routine, frequently recurring task; minimalpotential risk
+Established sequence of steps; requires littleto no modification for individual clients
+Predictable outcome
+
+ 
+Rightcircumstances
+ Relatively stable client; noncomplex task
+Adequate staffing, resources & supervisionavailable
+
+ 
+Right person
+ Delegator should assess competency prior todelegating
+Delegatee must have the appropriateknowledge, skills & abilities
+
+ 
+Right direction/communication
+ Delegator needs to provide clear instructions;must include specific client concerns &observations to be reported back or recorded
+Delegatee should verbalize understanding &have the opportunity to ask questions
+
+ 
+Rightsupervision/evaluation
+ Monitor, evaluate & intervene as needed
+Delegator retains ultimate accountability fortask
+
+ 
+
+
+Continuous bladder irrigation is prescribed following surgicaltransurethral resection of the prostate and prevents obstruction ofurine outflow by removing clotted blood from the bladder.. A 3-waycatheter is used to continuously infuse the solution into the bladderby gravity.. The catheter drains urine, irrigant solution, and blood intoa collection bag.
+The registered nurse (RN) should consider the five rights ofdelegation when delegating to unlicensed assistive personnel(UAP):
+Catheter care is a routine, noncomplex task that may be safelydelegated to UAP (Option 2).
+
+Any client reports of pain or bladder spasms to UAP shouldbe immediately conveyed to the RN because these symptomsmay indicate obstruction (Option 3).
+
+Measuring output is routine data measurement.. UAP shouldreport the volume to the RN, who will determine the adequacyof drainage (Option 5).
+
+
+(Option 1). Clots or kinks may obstruct drainage and cause a smallervolume of outflow than inflow.. The nurse should calculate thisdifference to determine the need to reestablish patency using manualirrigation.
+(Option 4). The irrigation rate should be titrated to maintain light-pinkoutflow drainage with few clots.. It is not within the UAP's scope ofpractice to titrate the inflow rate or to monitor drainage quality.
+Edtilbjti
+
+
+
+
+
+.End.Previous.NavigatorNext.
+Prioritization (between ...
+
+--------------------
+
+No. 34
+0
+A nurse is caring for a client at 37 weeks gestation who is undergoing acontraction stress test.. Which fetal strip should the nurse associatewith a negative contraction stress test?
+
+.1.
+
+
+.2.
+
+
+.3.
+
+
+.4.
+
+
+
+
+.
+
+Explanation
+
+A contraction stress test (CST) evaluates fetal well-being understress by identifying uteroplacental insufficiency.. Uterine bloodflow is decreased during uterine contractions, which stresses thefetus during labor.. Contractions are stimulated using either oxytocinadministration or nipple stimulation.. A fetal tracing is evaluateduntil 3 uterine contractions, each lasting 40-60 seconds, are capturedwithin 10 minutes.. A negative test has no late or variabledecelerations and is associated with good fetal outcomes (Option2).. A positive test includes late decelerations with ĄÝ50%contractions.. A suspicious or equivocal test includes variable orprolonged decelerations or late decelerations with <50%contractions.
+A CST may be combined with a nonstress test to further evaluatefetal well-being.. A negative CST with a reactive nonstress testprovides strong reassurance of fetal well-being.
+(Options 1 and 4). These fetal tracings show late decelerations,
+
+
+
+
+
+.End.Previous.NavigatorNext.
+Automatic external defib...
+
+--------------------
+
+No. 35
+0
+A nurse is performing cardiopulmonary resuscitation (CPR) on an adultat a swimming pool.. A bystander brings an automated externaldefibrillator (AED).. The nurse notes that the victim is wet and wearing atransdermal medication patch on the upper right chest.. Which action isappropriate?
+
+.1.
+Continue compressions while the AED analyzes theclient's heart rhythm
+.(8%).2.
+Do not use the AED and continue CPR untilparamedics arrive
+.(20%).3.
+Place the AED pad on the opposite side of thetransdermal patch
+.(7%).4.
+Remove the transdermal patch and wipe the chestbefore applying AED pads
+.(63%)
+Correct
+63%Answered correctly01 min, 12 secsTime Spent2023Version
+.
+
+
+Cardiac arrests require prompt use of an automated externaldefibrillator (AED), if available, because evidence shows that earlydefibrillation is associated with increased cardiopulmonaryresuscitation (CPR) success.. An AED is a portable device thatadministers an electric shock to attempt restoration of normal cardiacelectrical activity during cardiac arrest when used with otherresuscitative measures (eg, chest compressions, medication).
+To maximize the effectiveness of shock(s) administered by an AEDand increase safety to those providing aid, the client's chests shouldbe dry, free of residue, and cleaned of any barriers to conduction (eg,chest hair, transdermal patches) (Option 4).
+(Option 1). When the AED announces that it is ready for rhythmanalysis, compressions are paused and rescuers are to remain clearof the client.. The AED will then dictate if a shock is needed or if CPRshould be resumed.
+(Option 2). The AED should be turned on and AED pads applied assoon as AED is available.
+(Option 3). AED pads should not be placed over medication patchesbecause this interferes with conduction, can burn the skin, and wouldnot be effective if placed on the opposite side.. The transdermalpatch should be removed and any residue wiped away before placingthe appropriate pad on the right side of the chest.
+Educational objective:An automated external defibrillator (AED) is used as soon as possiblefor improved cardiopulmonary resuscitation outcomes.. TransdermalpatchesshouldberemovedandthechestwipeddrytopromoteAED
+
+
+
+
+
+.End.Previous.NavigatorNext.
+Stroke
+
+--------------------
+
+No. 36
+0
+A client arrives in the emergency department with right-sided paralysisand slurred speech.. The nurse understands that the client cannotreceive thrombolytic therapy due to which reason?
+
+.1.
+Client had gallbladder surgery 2 months ago
+.(12%).2.
+Client has a blood pressure of 175/100 mm Hg
+.(17%).3.
+Client has experienced loss of the gag reflex
+.(3%).4.
+Client's symptoms started 12 hours earlier
+.(65%)
+Correct
+65%Answered correctly55 secsTime Spent2023Version
+.
+
+Explanation
+Thrombolytic therapy (ie, t-PA) is used to dissolve blood clots andrestore perfusion in clients with ischemic stroke.. The nurse shouldassess for contraindications to t-PA due to the risk for hemorrhage.
+Clients have a 3- to 4.5-hour window from onset of symptoms toreceive t-PA to achieve full effectiveness of thrombolytic therapy(Option 4).
+(Option 1). Recent major surgery (ie, within the past 14 days) is acontraindication because t-PA dissolves all clots in the body and maytherefore disrupt the surgical site.. Gallbladder surgery 2 months prioris outside the window of contraindication.
+(Option 2). To receive t-PA, clients must have a systolic bloodpressure (BP) ĄÜ185 mm Hg and diastolic BP ĄÜ110 mm Hg.. In addition,BP should be maintained at ĄÜ180/105 mm Hg throughout theadministration of thrombolytic therapy and 24 hours thereafter.
+(Option 3). Loss of the gag reflex and other major functions wouldmost likely make the client a candidate for thrombolytics due to proofof deficits from stroke.
+Other contraindications include hemorrhagic stroke and stroke or headtrauma within the past 3 months.
+Educational objective:Thrombolytic therapy (ie, t-PA) is used to treat and dissolve blood clotsin clients with ischemic stroke.. This therapy should be administeredwithin 3-4.5 hours of symptom onset.. Contraindications includesevere hypertension (ie, blood pressure >185/110 mm Hg),coagulation disorders, and major surgery within the past 14 days.
+
+
+Pharmacological and Parenteral Therapies
+NCSBN Client Need
+Copyright . UWorld. All rights reserved.
+
+
+
+.End.Previous.NavigatorNext.
+Deep vein thrombosis
+
+--------------------
+
+No. 37
+0
+The charge nurse is teaching other nurses about prevention of venousthromboembolism.. Which interventions should be included in theteaching?. Select all that apply.
+
+1.
+Administer scheduled anticoagulants
+2.
+Apply sequential compression devices
+3.
+Elevate the legs with pillows behind the knees
+4.
+Have clients ambulate regularly as tolerated
+5.
+Instruct clients to point and flex the feet in bed
+
+
+Incorrect
+Correct answer.1,2,4,549%Answered correctly01 min, 43 secsTime Spent2023Version
+.
+
+Explanation
+
+Venous thromboembolism (VTE) occurs when a thrombus (eg,deep venous thrombosis) forms and embolizes into the bloodstream(eg, pulmonary embolism).. Hospitalized clients tend to have multiplerisk factors for VTE, including venous stasis from prolongedimmobility and endothelial damage from surgeries or IV catheterplacement.
+VTE prophylaxis should be implemented in all hospitalized clients..Measures include:
+Administration of anticoagulants (eg, enoxaparin), usuallyprescribed in clients with a moderate or high risk of VTE (eg,postsurgical) unless contraindicated (eg, active bleeding)(Option 1)
+
+Application of compression devices or elastic compressionstockings to limit venous stasis (Option 2)
+
+Frequent ambulation, 4-6 times daily as tolerated, to improvecirculation and promote venous return (Option 4)
+
+Foot and leg exercises (eg, extend and flex the feet andknees) to promote venous return by activating calf muscles(Option 5)
+
+
+(Option 3). Elevating the legs while in bed promotes venous returnby gravity.. However, the nurse should ensure that any pillows usedto elevate the legs do not place pressure directly behind the knees,as pressure on the posterior knees compresses leg veins.. Clientsshould also avoid crossing the legs to prevent pressure on the backof the knees.
+Educational objective:
+
+
+
+
+
+.End.Previous.NavigatorNext.
+Transmission-based preca...
+
+--------------------
+
+No. 38
+0
+A student nurse is accompanying the charge nurse when conductingdaily rounds.. Which personal protective measure by the charge nursedoes the student nurse question?
+
+.1.
+Dons a mask with eye shield along with standardprecautions while irrigating a client's draining wound
+.(9%).2.
+Places a "wash hands only with soap and water"sign in the room of a client with Clostridioides(formerly Clostridium) difficile
+.(7%).3.
+Wears 2 pairs of gloves when emptying the urinarycatheter collection bag of a client who is HIVpositive
+.(70%).4.
+Wears an N95 respirator mask before entering theroom of a client with an active varicella-zosterinfection
+.(12%)
+Correct
+70%Answered correctly01 min, 48 secsTime Spent2023Version
+.
+
+Explanation
+Infection control: isolation precautions
+ 
+Type
+ Pathogen*
+ Key requirements
+ 
+Airborne
+ Bacterial: tuberculosis
+Viral:. primary VZV(chickenpox), disseminatedVZV reactivation(shingles/zoster),dermatomal VZVreactivation(shingles/zoster) inimmunocompromisedpatients, COVID-19,measles
+
+ Negative pressureroom
+N95 respirator
+
+ 
+Contact
+ Multidrug-resistantorganism (eg, MRSA, VRE,ESBL producing)
+Bacterial: Clostridioidesdifficile, Escherichia coliO157:H7
+Viral: RSV, primary VZV(chickenpox), disseminatedVZV reactivation(shingles/zoster),dermatomal VZVreactivation(shingles/zoster) inimmunocompromisedpatients
+
+ Gloves & gowns
+Single-useequipment (eg,stethoscope)
+
+ 
+Droplet
+ Bacterial: Neisseriameningitidis, Haemophilusinfluenzae type B,Mycoplasma pneumoniae
+Viral: influenza virus,adenovirus
+
+ Mask within 1-2 m(3-6 ft) of patient
+
+ 
+Standard
+ Followed for all patientseven when no infection isapparent
+
+ Hand hygiene
+Gowns/gloves/maskswhen appropriate(eg, duringprocedures)
+
+ 
+*Precaution is started immediately when infection with pathogen issuspected.
+COVID-19 = coronavirus disease 2019; ESBL = extended-spectrum beta-lactamase; MRSA = methicillin-resistant Staphylococcus aureus; RSV =respiratory syncytial virus; VRE = vancomycin-resistant Enterococcus; VZV= varicella-zoster virus.
+ 
+
+
+The best way for health care workers to protect themselves againstpossible HIV transmission is to consistently follow standard(universal) precautions with all clients, regardless of HIV status..HIV is transmitted through contact with blood, breast milk, semen,
+
+
+
+
+
+.End.Previous.NavigatorNext.
+Chronic obstructive pulm...
+
+--------------------
+
+No. 39
+0
+A client with emphysema arrives at the clinic for a routine follow-upvisit.. Which manifestations are characteristic of emphysema?. Selectall that apply.
+
+1.
+Activity intolerance
+2.
+Barrel chest
+3.
+Hyperresonance on percussion
+4.
+Stridor
+5.
+Tracheal deviation
+
+
+Correct
+46%Answered correctly01 min, 29 secsTime Spent2023Version
+.
+
+Explanation
+
+Chronic obstructive pulmonary disease (COPD) is mostcommonly caused by inhaling irritants (eg, cigarette smoke, airpollution) and may include emphysema and/or chronic bronchitis.
+Emphysema is characterized by alveolar wall destruction.. Lungtissues lose elasticity (recoil) due to permanently enlarged, "floppy"alveoli.. This causes hyperinflation of the lungs (air trapping),manifested by hyperresonance on percussion and prolongedexpiration (Option 3).
+Hyperinflation of the lungs causes the client to develop a barrel-shaped chest.(Option 2).. Hyperinflated lungs also prevent the clientfrom meeting oxygen demands during increased activity, leading toactivity intolerance and anxiety (Option 1).. Pursed lip breathing("puffing"), accessory muscle use, and the tripod position (leaningforward with hands on the knees) are seen during exertion and as thedisease progresses.
+(Option 4). Stridor (harsh, high-pitched breathing) is due toobstruction or constriction of the large (upper) airway (eg, aspirationof a foreign object, anaphylaxis, epiglottitis).. Stridor indicates life-threatening airway compromise and requires prompt intervention.. Itis not a manifestation of emphysema.
+(Option 5). Tracheal deviation occurs with a tension pneumothorax,not emphysema.. When an injury causes air to become trapped in thepleural space, intrapleural pressure increases and pushes on theheart and great vessels.. This causes a mediastinal shift thatmanifests externally as tracheal deviation.
+Educational objective:Ehihtidblfltiitithldt
+
+
+
+
+
+.End.Previous.NavigatorNext.
+End of life care
+
+--------------------
+
+No. 40
+0
+The nurse prepares to administer potassium chloride to a client througha peripherally inserted IV line.. Which of the following are appropriatenursing interventions related to administration of this medication?.Select all that apply.
+
+1.
+Administer as IV bolus
+2.
+Assess IV site frequently
+3.
+Assess renal function laboratory results and urine output
+4.
+Place client on cardiac monitor
+5.
+Verify that IV pump infusion is not >10 mEq/hr (10mmol/hr)
+
+
+Correct
+54%Answered correctly01 min, 21 secsTime Spent2023Version
+.
+
+Explanation
+Potassium chloride (KCl) is commonly prescribed to correct orprevent hypokalemia.. The normal range for serum potassium is 3.5-5.0 mEq/L (3.5-5.0 mmol/L).. Potassium is commonly lost throughdiarrhea, vomiting, and diuretic use.. Appropriate nursing interventionswhen administering KCl IV should include:
+Frequent monitoring of the IV insertion site for extravasation toprevent tissue necrosis because Potassium is a vesicant(Option 2).
+
+Frequent monitoring of renal function laboratory results (eg,blood urea nitrogen, creatinine) and urine output as clients withimpaired renal function are unable to excrete potassium andother electrolytes effectively, potentially leading to toxicity(Option 3).
+
+Cardiac monitoring during therapy because changes inpotassium levels can cause cardiac rhythm disturbances, andrapid infusion can cause cardiac arrest (Option 4).
+
+Maintaining a KCl maximum infusion rate of 10 mEq/hr (10mmol/hr) and the maximum concentration of 40 mEq/L (40mmol/L).. Higher rates and concentrations require a centralvenous catheter (Option 5).
+
+
+(Option 1). KCl is never administered by IV push or as a fluid bolus..KCl is always diluted and given via infusion pump.
+Educational objective:Potassium chloride is administered to correct or prevent hypokalemia..When infused peripherally, the rate should be ĄÜ10 mEq/hr (10mmol/hr), the IV site should be frequently assessed for extravasation,and renal function (eg, urine output) should be monitored to preventtoxicity.. Periodic cardiac monitoring is recommended during therapy.
+
+
+Pharmacological and Parenteral Therapies
+NCSBN Client Need
+Copyright . UWorld. All rights reserved.
+
+
+
+.End.Previous.NavigatorNext.
+Respiratory syncytial vi...
+
+--------------------
+
+No. 41
+0
+A 2-month-old infant is admitted with respiratory syncytial virus andbronchiolitis.. Which of the following interventions should the nurseanticipate?. Select all that apply.
+
+1.
+Administer antipyretics
+2.
+Initiate IV fluids
+3.
+Keep the head of the bed flat
+4.
+Maintain isolation precautions
+5.
+Suction as needed
+
+
+Incorrect
+Correct answer.1,2,4,554%Answered correctly02 mins, 11 secsTime Spent2023Version
+.
+
+Explanation
+Respiratory syncytial virus (RSV) is a common cause of respiratorytract infection and bronchiolitis in infants and children, occurringprimarily during the winter.. It affects the ciliated cells of the respiratorytract, causing bronchiolar swelling and excessive mucusproduction.. RSV in infants causes rhinorrhea, fever, cough, lethargy,irritability, and poor feeding.. Severe RSV infection also causestachypnea, dyspnea, and poor air exchange.. Interventions aresupportive, including:
+Administering antipyretics to reduce fever and provide comfort(Option 1).
+
+Initiating IV fluids to correct dehydration due to fever, tachypnea,or poor oral intake (Option 2).
+
+Maintaining contact isolation; droplet precautions are added ifwithin 3 ft (0.91 m) of the client, depending on the facility policy(Option 4).
+
+Providing supplemental oxygen and suctioning to supportoxygen exchange and clear the airway (Option 5).
+
+
+(Option 3). The nurse should elevate the head of the bed to improvediaphragmatic expansion and promote secretion clearance.
+Palivizumab, a monoclonal antibody, is administered intramuscularlyonce monthly during the winter and spring to prevent RSV in childrenat high risk for contracting the infection (eg, prematurity, chronic lungdisease).
+Educational objective:Respiratory syncytial virus is a common cause of respiratory tractinfection and bronchiolitis in infants and children.. Nursingmanagement includes respiratory support (ie, supplemental oxygen,elevation of the head of the bed, airway suctioning) and administrationof antipyretics and IV fluids.. Contact isolation and droplet precautionsare required.
+
+
+Physiological Adaptation
+NCSBN Client Need
+Copyright . UWorld. All rights reserved.
+
+
+
+.End.Previous.NavigatorNext.
+Sterile technique
+
+--------------------
+
+No. 42
+0
+The nurse is preparing to don sterile gloves before suctioning a client'stracheostomy.. Place the steps of donning sterile gloves in the correctorder.. All options must be used.
+
+Unordered Options
+1. Open the inner glove package by foldingback the edges
+2. Perform hand hygiene and remove the outerglove package
+3. Pull the glove over the dominant hand
+4. Pull the glove over the nondominant hand
+5. Use the dominant fingers to grasp the cuff ofthe nondominant glove
+6. Use the nondominant fingers to grasp theedge of the cuff of the dominant glove
+Your Response / Correct Response
+2. Perform hand hygiene and remove the outerglove package
+1. Open the inner glove package by foldingback the edges
+6. Use the nondominant fingers to grasp theedge of the cuff of the dominant glove
+3. Pull the glove over the dominant hand
+5. Use the dominant fingers to grasp the cuff ofthe nondominant glove
+4. Pull the glove over the nondominant hand
+
+
+Correct
+15%Answered correctly01 min, 49 secsTime Spent2023Version
+.
+
+Explanation
+
+Sterile procedures (eg, urinary catheter insertion, tracheostomysuctioning) require the nurse to wear sterile gloves.. Insertion ofcatheters into the body can introduce infectious microorganisms;correctly donning sterile gloves decreases infection risk.. Thenondominant hand is used to apply the glove of the dominanthand first.. Using the dominant hand to apply the second gloveimproves dexterity and decreases the risk of contamination of thegloved dominant hand.
+The correct procedure for donning sterile gloves is as follows:
+Perform hand hygiene and remove the outer glove package(Option 2).
+
+Place the inner glove package on a clean, dry surface.
+
+Open the inner package by carefully folding back the edges(Option 1).
+
+Use the nondominant hand to grasp the cuff of the dominantglove.. Touch only the inside surface of the glove (Option 6).
+
+Use the fingers of the nondominant hand to pull on thedominant hand glove (Option 3).
+
+Place the fingers of the gloved dominant hand under the cuff ofthe nondominant glove.. Keep the gloved thumb pulled away toprevent contact with the skin of the nondominant hand (Option5).
+
+Pull on the nondominant hand glove (Option 4).
+
+
+Educational objective:Correctly donning sterile gloves decreases infection risk bypreventing the introduction of infectious microorganisms into thebody.. The nurse first applies the glove of the dominant hand, andthen uses the dominant hand to pull on the glove of the nondominanthand.
+
+
+Safety and Infection Control
+NCSBN Client Need
+Copyright . UWorld. All rights reserved.
+
+
+
+.End.Previous.NavigatorNext.
+Medication administration
+
+--------------------
+
+No. 43
+0
+A nurse is reading a client's tuberculin skin test 48 hours afterplacement and notes an 11-mm area of induration.. The client emigratedfrom Nigeria 1 year ago and reports no symptoms.. Which of thefollowing actions would be appropriate by the nurse?. Select all thatapply.
+
+1.
+Ask the client about a history of bacille Calmette-Gu¨Śrinvaccination
+2.
+Document the negative result in the client's electronicmedical record
+3.
+Have the client return in 1 week to receive a second skininjection
+4.
+Implement droplet precautions and wear a surgical maskduring care
+5.
+Obtain a prescription for a chest x-ray from the health careprovider
+
+
+Incorrect
+Correct answer.1,527%Answered correctly01 min, 53 secsTime Spent2023Version
+.
+
+Explanation
+Tuberculin skin test reactions
+ 
+Response
+ Consider positive in these clients/groups
+ 
+Induration ofĄÝ5 mm
+ HIV infected
+Immunosuppressed (disease, medication)
+Organ transplant recipients
+Recent contact with person with TB
+
+ 
+Induration ofĄÝ10 mm
+ Children age <4 or children & adolescents exposed tin high-risk groups
+Injection drug user
+Recent (<5 years) immigrant from high-prevalence c
+Resident or employee in high-risk congregate area (hshelter, correctional facility, nursing home, health car
+
+ 
+Induration ofĄÝ15 mm
+ No known risk factors for TB
+
+ 
+TB = tuberculosis.
+ 
+
+
+Tuberculin purified protein derivative (PPD) skin tests (ie, Mantouxtest) screen individuals for tuberculosis (TB) exposure.. The skin isassessed at the administration site 48-72 hours after placement..Positive results include an induration of ĄÝ5 mm in high-riskpopulations, ĄÝ10 mm in clients with potential risk or mildimmunosuppression, and ĄÝ15 mm in healthy individuals.
+If a client's tuberculin skin test (TST) is positive, the nurse should:
+Ask clients who emigrated from high-prevalence countries ifthey have received the bacille Calmette-Gu¨Śrin (BCG) vaccine..It is commonly administered to children in high-prevalencecountries but causes false-positive PPD tests (Option 1)..Interferon-gamma release assay testing is preferred in BCG-vaccinated clients because it does not produce false-positiveresults.
+
+Obtain a prescription for a chest x-ray to differentiate latent TBfrom active disease in asymptomatic clients (Option 5)
+
+
+(Options 2 and 3). PPD test is positive because there is aninduration >10 mm and the client emigrated from a high-prevalencecountry <5 years ago.. There is no indication to repeat the TST.
+(Option 4). Clients with active TB are placed under airborne isolationprecautions (eg, N95 respirator mask, negative-pressure room) , notdroplet precautions (eg, surgical mask).. In addition, this client has nosymptoms of active disease, so precautions are not warranted.
+Educational objective:Tuberculin purified protein derivative (PPD) skin tests screenindividuals for tuberculosis exposure.. Prior administration of thebacille Calmette-Gu¨Śrin vaccine can produce a false-positivetuberculin skin test.. Positive PPD reactions in clients who areasymptomatic require evaluation with chest x-ray to rule out activedisease.
+
+
+
+
+
+
+.End.Previous.NavigatorNext.
+Myocardial infarction
+
+--------------------
+
+No. 44
+0
+A client comes to the emergency department with crushing substernalchest pain.. Which of the following interventions should the nurseanticipate?. Select all that apply.
+
+1.
+Administer IV pain medication
+2.
+Check blood pressure and heart rate
+3.
+Obtain a 12-lead ECG
+4.
+Obtain blood specimens
+5.
+Position client in the supine position
+
+
+Correct
+43%Answered correctly01 min, 49 secsTime Spent2023Version
+.
+
+Explanation
+The nurse needs to quickly identify the signs and symptoms ofmyocardial infarction and initiate interventions to preserve cardiacmuscle.. The nurse should also recognize that female and older clientsmay have nonspecific symptoms (eg, fatigue, indigestion, shortness ofbreath).. Initial interventions in the emergency management of chestpain include:
+Insert 2 large-bore IV lines and administer prescribedmedications (eg, nitroglycerin, analgesic) (Option 1).. Thenurse should also anticipate a prescription for an antiplateletagent (eg, aspirin) if the client has not already received a dose.
+
+Assess airway, breathing, circulation (eg, vital signs, heart andlung sounds), and pain (Option 2).
+
+Obtain diagnostics (eg, 12-lead ECG, chest x-ray, bloodspecimens for cardiac markers and electrolytes) (Options 3and 4).
+
+Administer oxygen if required (eg, capillary oxygen saturation[SpO2] <90%, dyspnea).
+
+Initiate continuous cardiac monitoring.
+
+Prepare client for additional therapy (eg, percutaneous coronaryintervention, fibrinolytics).
+
+
+(Option 5). Unless contraindicated, the client should be placed in anupright, seated position because upright positioning improvesventilation and reduces pressure on the heart.
+Educational objective:The nurse should rapidly assess clients (eg, vital signs, heart and lungsounds, pain level) with acute chest pain and intervene (eg, 2 large-bore IV lines, oxygen, nitroglycerin, pain medication, aspirin) topreserve cardiac muscle.. A 12-lead ECG and blood specimens shouldbe obtained, and the client placed on continuous cardiac monitoring..Clients should be placed in an upright position, unless contraindicated,to improve ventilation and reduce pressure on the heart.
+
+
+Physiological Adaptation
+NCSBN Client Need
+Copyright . UWorld. All rights reserved.
+
+
+
+.End.Previous.NavigatorNext.
+Culture / Spirituality
+
+--------------------
+
+No. 45
+0
+A nurse reviews the plan of care for a client who has increasedintracranial pressure.. Which of the following nursing actions should beincluded?. Select all that apply.
+
+1.
+Administer a stool softener
+2.
+Dim the lights when not providing care
+3.
+Elevate the head on several pillows
+4.
+Maintain the body in the midline position
+5.
+Perform oral suctioning only when necessary
+
+
+Correct
+27%Answered correctly01 min, 19 secsTime Spent2023Version
+.
+
+Explanation
+For clients with increased intracranial pressure (ICP), the goal is toreduce ICP while managing basic needs.. Nursing interventions todecrease ICP include:
+Administering stool softeners to prevent straining whendefecating (Option 1).. Straining and coughing increaseintrathoracic and intraabdominal pressure, which increases ICP.
+
+Keeping the client in a calm environment with minimal noiseand disturbances (eg, dimmed lights, limited visitors) (Option 2).
+
+Keeping the head and body midline and avoiding extreme hipor neck flexion because it impedes venous drainage (Option 4).
+
+Positioning the head of the bed to 30 degrees to promotevenous return from the head, which decreases cerebral edema..Elevating the head >30 degrees decreases blood pressure,which can decrease cerebral perfusion pressure (CPP);therefore, positioning the client to balance ICP and CPP.
+
+Suctioning only when needed to maintain the airway and forno more than 2 passes lasting ĄÜ10 seconds per pass (Option 5).
+
+Treating fever aggressively (eg, acetaminophen) but keepingthe client from shivering to reduce metabolic demands.
+
+Frequently monitoring arterial blood gases to preventhypercapnia, which can increase ICP by causing cerebralvasodilation.
+
+
+(Option 3). For clients with increased ICP, elevating the head of thebed is preferred over using pillows, which may flex the neck, decreasevenous drainage, and increase ICP.
+Educational objective:For clients with increased intracranial pressure, the nurse shouldadminister stool softeners, maintain a quiet environment, promotevenous blood return (eg, keep the head midline at 30 degrees),suction only when needed, and reduce metabolic demands (eg, treatfever).
+
+
+Physiological Adaptation
+NCSBN Client Need
+Copyright . UWorld. All rights reserved.
+
+
+
+.End.Previous.NavigatorNext.
+Restraints
+
+--------------------
+
+No. 46
+0
+The nurse is caring for an adult client who is in soft wrist restraints..Which of the following nursing actions should be included in the plan ofcare?. Select all that apply.
+
+1.
+Offer fluids, nutrition, and toileting every 2 hours and asneeded
+2.
+Perform neurovascular assessment every hour
+3.
+Reassess client's continued need for restraints every 12hours
+4.
+Release restraints to perform range of motion exercisesevery 2 hours
+5.
+Remove restraints for a trial discontinuation every 4 hours
+
+
+Correct
+26%Answered correctly01 min, 35 secsTime Spent2023Version
+.
+
+Explanation
+Clients in physical restraints must be regularly assessed to preventskin breakdown, neurovascular deficits, and other safety concerns..Facilities may determine the frequency of client monitoring; however,general guidelines include:
+Offering fluids, nutrition, and toileting every 2 hours and asneeded (Option 1)
+
+Performing hourly neurovascular checks (eg, pulses, color,skin temperature, sensation, movement) (Option 2)
+
+Briefly releasing restraints for skin integrity assessment andrange of motion exercises every 2 hours (Option 4)
+
+
+(Option 3). Restraints should be a last resort and discontinued assoon as possible.. The nurse should regularly reassess (eg, everyhour) the client's continued need for restraints.
+(Option 5). Once restraints are discontinued, a new prescription isrequired to reapply them.. Trial discontinuations are not permitted.
+Educational objective:The nurse should monitor clients in physical restraints according togovernmental and regulatory agency guidelines and facility policy..Guidelines include regularly assessing neurovascular status; releasingrestraints for skin assessment and range of motion exercises; andoffering fluids, nutrition, and toileting.
+
+
+Safety and Infection Control
+NCSBN Client Need
+Copyright . UWorld. All rights reserved.
+
+
+
+.End.Previous.NavigatorNext.
+Enteral nutrition
+
+--------------------
+
+No. 47
+0
+The nurse administers an intermittent bolus enteral feeding to a clientvia nasogastric tube.. Which of the following actions by the nurse areappropriate?. Select all that apply.
+
+1.
+Aspirate and discard 50 mL of gastric residual prior tofeeding
+2.
+Assess the tube placement marking at the naris insertionsite
+3.
+Auscultate the client's bowel sounds prior to feeding
+4.
+Keep the client's head of the bed elevated at 45 degrees
+5.
+Slow the feeding rate if the client develops abdominalcramping
+
+
+Correct
+63%Answered correctly01 min, 48 secsTime Spent2023Version
+.
+
+
+Before administering intermittent enteral feedings, the nurseshould:Check the tube placement marking at the naris insertion site..Displacement of the marking indicates that the tube may havebeen partially withdrawn (Option 2).
+
+Assess bowel function (eg, auscultate bowel sounds,measure gastric residual) to evaluate feeding tolerance (Option3).
+
+Elevate the head of the bed to 30-45 degrees (and keep itelevated 30-60 min afterward) to minimize aspiration risk(Option 4).
+
+Confirm tube placement (eg, radiology report, gastric aspiratepH) to ensure that the tip is correctly placed in the stomach orsmall intestine.
+
+Flush tube with 30 mL of water (and again after feedings) toprevent clogging.
+
+
+During administration of intermittent enteral feedings, the feeding rateshould be slowed if abdominal cramping develops. .This may occurif feeding is administered too quickly or the formula is cold (Option5).
+(Option 1). Aspirated gastric residual volume (GRV) should bereturned to the stomach because repeatedly discarding aspirate maycause hypokalemia and metabolic alkalosis.. Facility policy mayadvise holding enteral feeding for high GRVs (eg, >500 mL) tominimize aspiration risk. .However, a GRV of 50 mL is not excessiveand should be returned.. Some facilities no longer routinely checkGRVs because recent evidence shows that this practice impairscalorie delivery and may be ineffective for predicting aspiration risk.
+Educational objective:Before administering intermittent enteral feedings, the nurse should
+
+
+
+
+
+.End.Previous.NavigatorNext.
+Dysrhythmias
+
+--------------------
+
+No. 48
+0
+The nurse is reinforcing education with a client with Marfan syndromewho is recovering from an aortic root repair and mechanical aortic valvereplacement via sternotomy and is prescribed warfarin.. Which of thefollowing client statements indicate a correct understanding of theteaching?. Select all that apply.
+
+1.
+"Because I have a mechanical valve, I will not needantibiotics for dental procedures."
+2.
+"I will have to have my spouse lift and carry heavy objectsfor me for several months."
+3.
+"I will need to take prescribed warfarin for the rest of mylife."
+4.
+"If I gain more than 5 lb (2.3 kg) in 1 week, I will need totell my health care provider."
+5.
+"My usual razor blades will need to be replaced with anelectric shaver."
+
+
+Correct
+50%Answered correctly01 min, 56 secsTime Spent2023Version
+.
+
+Explanation
+Aortic root repair with mechanical heart valve replacement is aprocedure often performed for clients with Marfan syndrome aconnective tissue disorder that increases the risk for aortic rupture..Clients with mechanical valve replacement via sternotomy requireeducation on lifestyle changes and prevention of complications,including:
+Avoiding heavy lifting (ie, objects over 10 lb [4.5 kg]) for 3-6months after surgery to prevent disruption of the sternotomysutures/wires and allow the breastbone to heal (Option 2).
+
+Maintaining lifelong anticoagulant therapy (eg, warfarin,apixaban) after a mechanical valve replacement to preventthromboembolic events (eg, stroke) and valve thrombosis(Option 3).
+
+Reporting signs and symptoms of heart failure (eg, weight gain>5 lb [2.3 kg] in 1 week) immediately which may indicate valvefailure (Option 4).
+
+Initiating bleeding precautions (eg, using an electric shaver)because anticoagulant therapy increases the risk of uncontrolledbleeding (Option 5).
+
+
+(Option 1). Clients with mechanical heart valves are at high risk forinfective endocarditis because bacteria can adhere to and proliferateon components of the valve.. The client should receive prophylacticantibiotics before invasive respiratory and dental procedures, includingroutine dental cleanings.
+Educational objective:Clients who have received mechanical valve replacement viasternotomy require education regarding avoidance of heavy lifting,anticoagulant therapy, signs and symptoms of heart failure, andbleeding precautions.. Clients with mechanical heart valves are at riskfor infective endocarditis, and prophylactic antibiotics should be givenbefore dental and respiratory procedures.
+
+
+Reduction of Risk Potential
+NCSBN Client Need
+Copyright . UWorld. All rights reserved.
+
+
+
+.End.Previous.NavigatorNext.
+Constipation
+
+--------------------
+
+No. 49
+0
+The nurse is teaching about constipation prevention to a client.. Whichof the following client statements indicate appropriate understanding ofthe teaching?. Select all that apply.
+
+1.
+"Drinking more caffeinated drinks such as tea and sodahelps to stimulate the bowel."
+2.
+"Having a routine for bowel movements is important, but Ishould not wait if I feel the urge."
+3.
+"I can use an over-the-counter laxative every other day ifneeded."
+4.
+"I should try to eat more fruits and vegetables every day."
+5.
+"Increasing my daily exercise level may help keep mybowel movements regular."
+
+
+Correct
+74%Answered correctly01 min, 17 secsTime Spent2023Version
+.
+
+Explanation
+
+Constipation is a symptom of many disease processes (eg,Parkinson disease, diabetic neuropathy, depression), procedures (eg,abdominal surgery, bowel manipulation), and medications (eg,anticholinergics, diuretics, opioids).. Immobility, a low-fiber diet,decreased fluid intake, and irregular bowel habits increase thelikelihood of constipation.. Educate clients to prevent constipation by:
+Encouraging a healthy bowel regimen by avoiding delayingdefecation.. If the urge is felt, defecate at the same time daily,and when possible, track bowel movements to identify changesin patterns (Option 2)
+
+Increasing consumption of fruits and vegetables to reach adaily fiber intake of at least 20 g (unless contraindicated)because fiber softens and increases the bulk of stool, whichpromotes defecation (Option 4)
+
+Increasing daily exercise levels because activity stimulatesperistalsis and promotes defecation (Option 5)
+
+Drinking 2-3 L of noncaffeinated fluids daily (unlesscontraindicated), which prevents drying and hardening of stoolin the colon
+
+
+(Option 1). Clients should avoid caffeinated beverages, whichpromote diuresis and dehydration and may lead to constipation.
+(Option 3). Clients should avoid using laxatives and enemas unlessprescribed by a health care provider because overuse can causephysical and psychological dependence.
+Educational objective:Constipation is a symptom of many disease processes, procedures,and medications.. To prevent constipation, educate the client toincrease daily fiber intake, drink 2-3 L of fluids daily, increase dailyactivity levels, and initiate a bowel regimen (avoiding delay ofdefecation, defecating at the same time each day).
+
+
+HealthPromotionandMaintenance
+
+
+
+.End.Previous.NavigatorNext.
+Gastroesophageal reflux ...
+
+--------------------
+
+No. 50
+0
+The nurse is reinforcing education about lifestyle choices to help reducesymptoms for a client with gastroesophageal reflux disease.. Which ofthe following statements by the client indicate a correct understanding?.Select all that apply.
+
+1.
+"I have switched from coffee to decaffeinated herbal tea inthe mornings."
+2.
+"I plan to join a smoking-cessation program."
+3.
+"I prefer to eat three large meals a day and avoidsnacking."
+4.
+"I prop myself up on a couple of pillows when I go tosleep."
+5.
+"I will switch to low-fat dairy products and avoid high-fatfoods."
+
+
+Correct
+49%Answered correctly01 min, 47 secsTime Spent2023Version
+.
+
+Explanation
+
+Gastroesophageal reflux disease (GERD) occurs when chronicreflux of stomach contents causes inflammation of the esophagealmucosa.. The lower esophageal sphincter normally prevents stomachcontents from entering the esophagus.. Factors that decrease thetone of the lower esophageal sphincter (eg, caffeine, alcohol), delaygastric emptying (eg, fatty foods), or increase gastric pressure(eg, large meals) can precipitate GERD.
+Lifestyle and dietary measures that may help prevent GERD andassociated symptoms include:
+Weight loss because excessive abdominal fat may increasegastric pressure
+
+Avoiding GERD triggers such as caffeine, alcohol, nicotine,high-fat foods, chocolate, spicy foods, peppermint, andcarbonated beverages (Options 1 and 5)
+
+Chewing gum to promote salivation, which may help neutralizeand clear acid from the esophagus
+
+Sleeping with the head of the bed elevated (Option 4)
+
+Discontinuing the use of tobacco products (Option 2)
+
+Refraining from eating at bedtime and/or lying downimmediately after eating
+
+
+(Option 3). Clients with GERD should eat small, frequent meals withsips of water or fluids to help facilitate the passage of stomachcontents into the small intestine and help prevent reflux from anoverly full stomach during and after meals.
+Educational objective:Lifestyle and dietary measures that help prevent or minimizesymptoms of gastroesophageal reflux disease include avoidingdietary triggers such as alcohol, caffeine, chocolate, peppermint, and
+
+
+
+
+
+.End.Previous.NavigatorNext.
+Electroconvulsive therapy
+
+--------------------
+
