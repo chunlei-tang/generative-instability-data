@@ -1,361 +1,315 @@
-# Data for: Decision Stability under Conflicting Evidence in AI-Assisted Clinical Decision Systems
+# Decision Stability Under Conflicting Evidence in Generative AI Systems
 
-This repository contains evidence prompts, model-generated outputs, and supporting materials associated with the manuscript:
+This repository contains the experimental materials, structured output definitions, analysis framework, and reproducibility resources associated with the study:
 
 **Decision Stability under Conflicting Evidence in AI-Assisted Clinical Decision Systems: Experimental Study**
 
-The repository is intended to support transparency and reproducibility of the experimental framework used to examine decision stability under conflicting and standardized evidence conditions.
+The study examines repeated-run decision stability in generative AI systems under structured evidentiary conflict and standardized decision conditions. It evaluates where variability emerges across a predefined decision hierarchy, whether stability profiles differ across models, and how structured evidence attribution changes decision stability across specific analytical decision fields.
 
 ---
 
-## Contents
+## Study Overview
 
-- `data/evidence_packs/`  
-  Shared experimental prompt materials and structured evidence packs used across the study.
+Generative AI systems may produce different yet internally coherent decisions when repeatedly presented with the same evidence. This study evaluates such variability using controlled repeated-run experiments.
 
-- `data/initial_7run/`  
-  Materials and representative outputs from the initial experimental phase using ChatGPT 5.1 Thinking and Gemini 3 Pro with 7 repeated runs per item.
+Two experimental conditions are examined:
 
-- `data/revised_20run/`  
-  Materials and representative outputs from the revised experimental phase using GPT-6 Astra Medium and Gemini 3.1 Pro with 20 repeated runs per item.
+- **Conflict condition (E1):** structured evidence prompts containing heterogeneous and conflicting recommendations or evidence.
+- **Standardized condition (E2):** standardized single-answer items without evidentiary contradiction.
 
-  The revised phase includes:
-  - E1 baseline
-  - E1 evidence-attribution intervention
-  - E2 standardized comparison condition
+E1 and E2 are used to characterize decision stability under different task structures. They are not treated as perfectly matched conditions differing only in the presence or absence of evidentiary conflict.
 
-Complete repeated-run datasets used for the primary revised analyses are provided as supplementary study materials.
+The study includes two experimental phases:
 
----
+1. **Initial phase:** 7 repeated runs per item using ChatGPT 5.1 Thinking and Gemini 3 Pro.
+2. **Revised phase:** 20 repeated runs per item using GPT-6 Astra Medium and Gemini 3.1 Pro.
 
-## Experimental Phases
-
-The study includes two experimental phases.
-
-### Initial Experiments
-
-The initial experiments evaluated:
-
-- ChatGPT 5.1 Thinking
-- Gemini 3 Pro
-
-Each item was evaluated across 7 repeated runs.
-
-The initial phase included:
-
-- **E1:** conflicting-evidence condition
-- **E2:** standardized comparison condition
-
-These experiments provided the initial characterization of decision variability under conflicting and standardized evidence conditions.
-
-### Revised Experiments
-
-During revision, the experiments were repeated using newer model versions:
-
-- GPT-6 Astra Medium
-- Gemini 3.1 Pro
-
-Each item was evaluated across 20 repeated runs.
-
-The revised phase included:
-
-- **E1 baseline:** conflicting-evidence condition
-- **E1 intervention:** conflicting evidence with structured evidence attribution
-- **E2 baseline:** standardized comparison condition
-
-The primary statistical analyses reported in the revised manuscript are based on the revised 20-run experiments.
-
-Results from the initial 7-run experiments are retained for descriptive comparison across experimental phases and model versions.
-
-Because the two phases differed in model versions, number of repeated runs, and execution protocol, cross-phase comparisons should be interpreted descriptively rather than as causal estimates of model improvement.
-
----
-
-## Experimental Framework
-
-The study evaluates model behavior under two primary evidence conditions.
-
-### Conflict Condition (E1)
-
-E1 uses structured evidence prompts containing conflicting or partially incompatible recommendations.
-
-The purpose of E1 is to examine how generative models organize and reproduce decisions when multiple evidence sources support different plausible recommendations.
-
-### Standardized Condition (E2)
-
-E2 uses standardized items without structured evidentiary contradiction and serves as a comparison condition.
-
-The E2 condition provides a reference for examining decision stability when the structured conflict present in E1 is absent.
+The revised 20-run experiments constitute the primary analyses. The initial experiments are retained for descriptive cross-phase comparison.
 
 ---
 
 ## Decision Structure
 
-Model outputs are represented using three decision dimensions:
+Model responses are represented using a predefined structured output framework comprising **three hierarchical decision levels represented by four analytical decision fields**:
 
-- **Policy_Decision (Level 1):** high-level decision framing
-- **Operational_Interval (Level 2):** actionable implementation recommendation
-- **Evidence_Priority (Level 3):** evidence category emphasized in the generated decision
+- `Policy_Decision` (**Level 1: Policy framing**)  
+  High-level normative or policy framing of the decision.
 
-Repeated model runs are used to characterize variability within each decision dimension.
+- `Operational_Strategy` (**Level 2: Operational implementation**)  
+  Type of implementation strategy selected by the model.
 
-The framework does not assume that variability will be concentrated at any specific level.
+- `Operational_Interval` (**Level 2: Operational implementation**)  
+  Specified timing interval, when applicable.
 
-Instead, stability is evaluated separately across decision levels and models.
+- `Evidence_Priority` (**Level 3: Evidence attribution**)  
+  Evidence category or source emphasized in the generated decision.
 
----
+`Operational_Strategy` and `Operational_Interval` together represent operational implementation (Level 2).
 
-## E1 Conflict Scenario
-
-The released E1 materials include structured evidence concerning repositioning frequency for pressure injury prevention in hospitalized adults.
-
-The evidence packs contain sources with partially conflicting operational implications, including:
-
-- clinical guidelines supporting individualized or risk-based repositioning;
-- randomized trials evaluating alternative repositioning intervals;
-- observational or quality-improvement evidence supporting fixed schedules;
-- additional evidence reflecting heterogeneity in patient populations, clinical settings, and intervention strategies.
-
-The evidence content and structured response categories are held constant within directly compared experimental conditions.
+The predefined categorical outputs are used directly for repeated-run analysis. The primary analysis therefore does not rely on retrospective human classification of unrestricted free-text responses into decision categories.
 
 ---
 
-## Output Structure
+## Experimental Framework
 
-Model responses are requested in structured JSON format.
+### Conflict Condition (E1)
 
-The primary decision variables are:
+E1 consists of structured evidence prompts containing conflicting recommendations or guidelines.
 
-- `Policy_Decision`
-- `Operational_Interval`
-- `Evidence_Priority`
-- `Confidence`
+Evidence packs were constructed from representative biomedical evidence, including randomized trials, clinical guidelines, and observational studies with documented inconsistencies in recommendations. Evidence was restricted to acute hospital settings to reduce contextual variability while preserving directional tension across evidence sources.
 
-Depending on the experimental phase and released file, records may also contain metadata such as:
+Evidence-direction labels were used as experimental design labels to construct controlled directional tension and were not intended to represent formal clinical evidence grading.
 
-- `Pack_ID` or `Question_ID`
-- `pack_id`
-- `task`
-- `model`
-- `condition`
-- `output_type`
-- `run_id`
+In the revised phase:
 
-These metadata are used to identify the model, experimental condition, item, and repeated run associated with each output.
+- 9 E1 evidence packs were evaluated.
+- Each evidence pack was evaluated across 20 repeated runs per model.
+- Each repeated run was conducted in a new model session.
+
+### Standardized Condition (E2)
+
+E2 consists of 50 standardized single-answer items without evidentiary contradiction.
+
+In the revised phase:
+
+- 50 E2 items were evaluated.
+- Each item was evaluated across 20 repeated runs per model.
+- `Operational_Strategy`, `Operational_Interval`, and `Evidence_Priority` were represented using the predefined standardized response schema.
+
+Because E1 and E2 differ in task structure and response constraints, comparisons between them are interpreted descriptively rather than as estimates of the isolated causal effect of evidentiary conflict.
+
+Zero entropy observed in schema-constrained E2 decision fields should therefore be interpreted within the predefined E2 response structure rather than as evidence that the absence of evidentiary conflict necessarily produces deterministic model outputs.
 
 ---
 
 ## Revised 20-Run Execution
 
-For the revised experimental phase, each repeated run was conducted in a new model session.
+The revised experiments were conducted through the models' user-facing interfaces between **September 17 and September 21, 2026**.
 
-Items were submitted using standardized batch prompts.
+The models evaluated in the revised phase were:
 
-Models were instructed to evaluate each item independently and not to use information, reasoning, or conclusions from one item when answering another item within the same batch.
+- **GPT-6 Astra Medium**
+- **Gemini 3.1 Pro**
 
-The structured output schema was held constant across directly compared conditions.
+GPT-6 Astra was evaluated using the **Medium reasoning setting**. No separate reasoning setting was selected for Gemini 3.1 Pro.
 
-The revised experiments used:
+No explicit randomness control was imposed, reflecting standard generative usage conditions. Temperature and top-p were not manually specified where these parameters were not exposed through the user-facing interface.
 
-- 20 repeated runs per E1 evidence pack
-- 20 repeated runs per E2 item
-- 20 repeated runs per E1 intervention evidence pack
+No external browsing or auxiliary tools were enabled during inference.
 
----
+For each repeated run:
 
-## Evidence-Attribution Intervention
-
-An additional evidence-attribution condition was evaluated under E1 during the revised experimental phase.
-
-In this condition, models were instructed to explicitly evaluate and prioritize the supplied evidence before selecting the final policy and operational recommendation.
-
-The intervention required the model to consider:
-
-1. evidence type and strength;
-2. clinical context and patient characteristics;
-3. which evidence category most directly supported the operational recommendation;
-4. whether a single evidence category dominated or whether the evidence should be classified as mixed.
-
-The underlying clinical question, evidence packs, response categories, and structured output format remained matched to the E1 baseline condition.
-
-The intervention was designed to test whether explicit evidence structuring changes the stability and distribution of generated decisions.
+- A new model session was initiated.
+- E1 items were submitted as standardized batches of 9 evidence packs.
+- E2 items were submitted as standardized batches of 50 items.
+- Models were explicitly instructed to evaluate each item independently and not to use information, reasoning, or conclusions from one item when answering another.
+- Each item contributed one structured output per repeated run.
 
 ---
 
-## Measures
+## Output Structure
 
-The dataset supports analysis of:
+The primary analytical decision fields are:
 
-1. Cross-model differences
-2. Intra-model variability across repeated runs
-3. Decision-level stability profiles
-4. Decision-level entropy
-5. Verbalized confidence
-6. Changes in variability following structured evidence attribution
-7. Descriptive comparison across experimental phases and model versions
+- `Policy_Decision`
+- `Operational_Strategy`
+- `Operational_Interval`
+- `Evidence_Priority`
+
+The structured outputs also include model-generated confidence scores where requested.
+
+Confidence values are treated as **verbalized confidence** rather than calibrated probabilistic estimates of epistemic uncertainty.
 
 ---
 
-## Decision-Level Entropy
+## Decision-Field Entropy
 
 Variability in categorical model outputs is quantified using Shannon entropy.
 
-Entropy is calculated separately for each decision level based on the empirical distribution of categorical outputs across repeated runs.
+For a discrete decision field \(X\) with categorical outcomes \(x_1, x_2, ..., x_k\):
 
-Higher entropy indicates greater dispersion of outputs within the corresponding coding structure, whereas lower entropy indicates greater stability.
+\[
+H(X) = -\sum_{i=1}^{k} P(x_i)\log_2 P(x_i)
+\]
 
-Because the number and type of admissible categories differ across decision levels, absolute entropy values should be interpreted within the predefined coding structure of each level.
+where \(P(x_i)\) is the empirical probability of outcome \(x_i\) across repeated runs.
 
-Cross-level comparisons are therefore used to characterize the distribution of variability across decision dimensions rather than to assume identical theoretical entropy ceilings.
+Entropy is reported in bits.
 
-For the revised analyses, entropy was calculated within each item across repeated runs and then summarized across items.
+- \(H = 0\) indicates no observed variability across repeated runs.
+- Higher entropy indicates greater dispersion of categorical outputs.
+
+For the revised experiments, entropy is calculated separately for each item across 20 repeated runs and then summarized across items within each model and experimental condition.
+
+---
+
+## Normalized Entropy
+
+Because the predefined response categories differ across analytical decision fields, normalized entropy is additionally calculated as:
+
+\[
+H_{norm} = \frac{H}{\log_2(K)}
+\]
+
+where \(K\) is the number of predefined categories for the corresponding analytical decision field.
+
+The category counts used in the revised analysis are:
+
+- `Policy_Decision`: **K = 3**
+- `Operational_Strategy`: **K = 3**
+- `Operational_Interval`: **K = 4**
+- `Evidence_Priority`: **K = 4**
+
+Both raw Shannon entropy and normalized entropy are reported in the revised analyses.
 
 ---
 
 ## Verbalized Confidence
 
-The `Confidence` field represents a model-generated confidence score on a 0–100 scale.
+Confidence scores explicitly generated by the models on the requested 0–100 scale are summarized using mean and standard deviation.
 
-In this study, this measure is referred to as **verbalized confidence**.
+These values represent generated textual outputs rather than calibrated probabilistic estimates of uncertainty.
 
-Verbalized confidence is a generated output variable and should not be interpreted as:
+Differences in verbalized confidence between E1 and E2 are summarized descriptively using **Cohen's d**.
 
-- a calibrated probability of correctness,
-- a direct estimate of epistemic uncertainty,
-- a token-probability-based uncertainty measure, or
-- a direct observation of the model's internal confidence state.
+Because E1 and E2 differ in task structure and response constraints in addition to evidentiary composition, confidence differences should not be interpreted as estimates of the isolated effect of evidentiary conflict.
 
-Differences in verbalized confidence across experimental conditions are therefore interpreted as changes in expressed confidence at the output level.
+---
 
-Standardized effect sizes calculated from these values describe differences in generated confidence scores between conditions and should not be interpreted as calibrated changes in epistemic uncertainty.
+## Evidence Attribution Intervention
+
+An additional intervention was evaluated under E1 to examine whether **structured evidence attribution** alters repeated-run decision stability.
+
+In the intervention condition, models were required to explicitly evaluate and prioritize the supplied evidence before generating the final policy and operational recommendation.
+
+In the initial 7-run phase, this intervention was evaluated exploratorily for ChatGPT and was not implemented symmetrically across both models.
+
+In the revised 20-run phase, the intervention was applied to both GPT-6 Astra Medium and Gemini 3.1 Pro using the same:
+
+- evidence materials,
+- structured output schema, and
+- repeated-run protocol
+
+as the E1 baseline condition.
+
+Intervention effects are evaluated separately across:
+
+- `Policy_Decision`
+- `Operational_Strategy`
+- `Operational_Interval`
+- `Evidence_Priority`
+
+The intervention is therefore evaluated according to whether structured evidence attribution changes the **magnitude or location of variability across specific decision fields**, rather than by assuming a uniform reduction in entropy across the decision hierarchy.
 
 ---
 
 ## Interpretation of the Intervention
 
-The evidence-attribution intervention is intended to test whether explicitly structuring evidence prioritization changes the distribution and stability of model-generated decisions.
+Structured evidence attribution should not be interpreted as a general mechanism that necessarily reduces model variability.
 
-Intervention effects are evaluated separately across:
+The revised experiments indicate that intervention effects may differ across models and analytical decision fields.
 
-- `Policy_Decision`
-- `Operational_Interval`
-- `Evidence_Priority`
+Accordingly, intervention-related changes are evaluated separately for each decision field rather than summarized as a single global stabilization effect.
 
-Changes in entropy are interpreted as changes in output variability within the corresponding decision dimension.
+This distinction is important because a structured intervention may reduce variability in one part of the decision hierarchy while leaving another field unchanged or increasing variability elsewhere.
 
-The intervention should not be assumed to affect all decision levels or models in the same direction.
+---
 
-Changes observed under the intervention should not be interpreted as evidence that:
+## Repository Contents
 
-- the model has become clinically more accurate,
-- the model has acquired calibrated uncertainty,
-- the intervention improves real-world patient safety, or
-- human users will necessarily rely on the model more appropriately.
+This repository provides materials supporting interpretation and reproduction of the study, including, where applicable:
 
-These questions require separate clinical, calibration, or human-subject evaluation.
+- experimental prompts;
+- E1 evidence materials;
+- E2 standardized materials;
+- structured output definitions;
+- representative model outputs;
+- analytical variable definitions;
+- entropy analysis specifications;
+- intervention materials; and
+- documentation describing the experimental and analytical framework.
+
+Complete repeated-run datasets associated with the reported analyses are provided with the study's supplementary materials where indicated.
+
+The repository and supplementary study package should therefore be considered complementary components of the reproducibility materials.
+
+---
+
+## Reproducing the Analysis
+
+The principal analysis workflow is:
+
+1. Organize repeated model outputs by model, condition, item, and run.
+2. Extract the predefined categorical values for:
+   - `Policy_Decision`
+   - `Operational_Strategy`
+   - `Operational_Interval`
+   - `Evidence_Priority`
+3. Calculate Shannon entropy separately for each analytical decision field within each item across repeated runs.
+4. Calculate normalized entropy using the predefined category count \(K\) for each field.
+5. Summarize item-level entropy within model and experimental condition.
+6. Summarize model-generated verbalized confidence using mean and standard deviation.
+7. Calculate Cohen's d for descriptive E1–E2 confidence contrasts.
+8. Compare E1 baseline and structured evidence-attribution intervention conditions separately for each analytical decision field.
+9. Use bootstrap confidence intervals, where reported, to characterize uncertainty in intervention-related entropy differences.
+10. Generate the corresponding tables and figures from the analyzed outputs.
+
+---
+
+## Interpretation of Stability
+
+Decision stability is treated as an empirical property of repeated model behavior.
+
+Importantly:
+
+- greater stability does **not** necessarily indicate greater clinical correctness;
+- lower entropy does **not** establish that a recommendation is clinically appropriate;
+- verbalized confidence does **not** represent calibrated epistemic uncertainty; and
+- differences between E1 and E2 should not be interpreted as the isolated causal effect of evidentiary conflict.
+
+The framework is intended to characterize **where and to what extent repeated model outputs vary**, rather than to establish the clinical validity of the generated recommendations.
 
 ---
 
 ## Cross-Phase Comparison
 
-The initial 7-run experiments and revised 20-run experiments provide a descriptive comparison of decision stability across different model versions and experimental phases.
-
-The initial phase used:
-
-- ChatGPT 5.1 Thinking
-- Gemini 3 Pro
-- 7 repeated runs per item
-
-The revised phase used:
-
-- GPT-6 Astra Medium
-- Gemini 3.1 Pro
-- 20 repeated runs per item
-
-Absolute variability differed between the two experimental phases in several decision dimensions.
-
-However, the phases also differed in:
+The initial and revised experimental phases differ in:
 
 - model versions,
-- number of repeated runs,
-- and execution protocol.
+- number of repeated runs, and
+- execution protocol.
 
-Cross-phase differences should therefore be interpreted descriptively.
+Cross-phase comparisons are therefore descriptive and should not be interpreted as causal estimates of model-version improvement.
 
-They should not be interpreted as causal estimates of model improvement or as evidence that differences are attributable solely to model generation.
-
----
-
-## Reproducibility Notes
-
-- Experimental prompts and response schemas are documented to support transparency of the study design.
-- Experimental conditions hold prompt structure and evidence content constant within each direct comparison.
-- Repeated runs are used to estimate output variability under otherwise matched conditions.
-- Model version, prompting condition, run identifier, and coded decision outputs are retained where available.
-- Baseline and evidence-attribution intervention conditions use the same underlying E1 evidence materials.
-- The structured output schema is held constant across directly compared conditions.
-- A new model session was initiated for each repeated run in the revised experiments.
-- Revised experiments were conducted using standardized batch prompts.
-- Items within each batch were explicitly instructed to be evaluated independently.
-- The repository documents model-output behavior and does not contain patient-level data or identifiable personal information.
-
-Because generative AI systems may change over time, exact replication with later model versions may not reproduce historical outputs identically.
-
-The repository is therefore intended to support transparency of the experimental conditions, prompts, output structure, and observed model behavior at the time of evaluation.
+The initial experiments are retained to illustrate how observed stability profiles may differ across model generations and experimental configurations.
 
 ---
 
-## Scope and Limitations
+## Data and Reproducibility
 
-This dataset is intended to support analysis of decision stability in generative AI-assisted decision systems.
+This repository is intended to support transparent inspection of the experimental design, structured decision framework, prompts, evidence materials, analytical definitions, and reproducibility workflow.
 
-It should not be interpreted as:
+Complete repeated-run outputs and additional analysis materials are provided as supplementary study materials where indicated.
 
-- a benchmark of overall model quality,
-- a direct measure of calibrated epistemic uncertainty,
-- evidence of human automation bias or user behavior,
-- a clinical effectiveness evaluation,
-- a clinical safety evaluation, or
-- evidence that one operational recommendation is clinically superior to another.
+Users reproducing the analysis should preserve the distinction between:
 
-The study evaluates patterns in model-generated outputs under controlled evidence conditions.
+- the **three-level conceptual decision hierarchy**, and
+- the **four analytical decision fields** used for entropy analysis.
 
-Human responses to model instability, including trust, reliance, automation bias, and behavioral decision-making, were not directly evaluated.
-
-The study evaluates a limited set of model versions, and stability characteristics may differ across future models, architectures, system configurations, or prompting environments.
-
----
-
-## Data Availability
-
-This repository provides structured prompt materials and representative model outputs from both experimental phases.
-
-Materials from the initial 7-run experiments are retained for descriptive comparison with the revised experiments.
-
-Materials from the revised 20-run experiments include:
-
-- E1 baseline prompts and representative outputs
-- E1 evidence-attribution intervention prompts and representative outputs
-- E2 standardized prompts and representative outputs
-
-Complete repeated-run datasets used for the primary revised analyses are provided as supplementary study materials.
-
-The repository is intended to make the experimental structure, prompt design, output coding, and representative model behavior transparent and inspectable.
-
-Additional materials may be obtained from the corresponding authors upon reasonable request.
+In particular, `Operational_Strategy` and `Operational_Interval` should be analyzed separately while both remain components of operational implementation (Level 2).
 
 ---
 
 ## Citation
 
-If you use this dataset or experimental framework, please cite the associated manuscript:
+If you use these materials, please cite the associated manuscript:
 
-Zhou F, Sheng J, Yang H, He Y, Tang C.  
-**Decision Stability under Conflicting Evidence in AI-Assisted Clinical Decision Systems: Experimental Study.**  
-Under review.
+**Tang C, et al. Decision Stability under Conflicting Evidence in AI-Assisted Clinical Decision Systems: Experimental Study.**
+
+Citation information will be updated following publication.
 
 ---
 
-## Contact
+## License
 
-For questions regarding the dataset, experimental materials, or additional study information, please contact the corresponding authors.
+Please refer to the repository license for conditions governing reuse of the materials.
