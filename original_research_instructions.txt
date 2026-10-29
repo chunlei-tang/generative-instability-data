@@ -1,0 +1,71 @@
+ORIGINAL RESEARCH INSTRUCTIONS
+English Summary of the Original Research Direction and Tasks
+
+Source: Original Chinese research instructions titled "项目方向与当前任务说明" (Research Direction and Current Tasks).
+
+This document summarizes the original research instructions provided to the research team. It is an English summary, not a verbatim translation or a retrospectively developed experimental protocol.
+
+1. RESEARCH OBJECTIVE
+
+Investigate how large language models make clinical decisions when presented with conflicting medical evidence.
+
+The central research question is whether AI-generated clinical recommendations exhibit different levels of stability across a hierarchy of decisions, particularly between general clinical principles and specific operational recommendations.
+
+2. THREE LEVELS OF CLINICAL DECISION-MAKING
+
+The research was organized around three decision levels:
+
+Level 1 — Policy Decision:
+The overall clinical principle or recommendation.
+
+Level 2 — Operational Decision:
+Specific implementation parameters, such as the recommended interval for repositioning patients.
+
+Level 3 — Evidence Attribution:
+The clinical evidence prioritized by the model when formulating its recommendation.
+
+The purpose was to examine decision stability across these three levels.
+
+3. EXPERIMENT E1: CONFLICTING CLINICAL EVIDENCE
+
+The research team was instructed to review relevant clinical literature and construct approximately 10–15 candidate evidence packs containing conflicting recommendations.
+
+Each evidence pack should preferably include:
+
+- A high-quality randomized controlled trial.
+- A clinical guideline or systematic review.
+- An observational or real-world clinical study.
+
+The selected evidence should demonstrate meaningful differences or tensions in clinical recommendations.
+
+The objective was to create controlled experimental scenarios in which AI models must interpret and reconcile conflicting clinical evidence.
+
+4. EXPERIMENT E2: STANDARDIZED CLINICAL QUESTIONS
+
+The research team was also instructed to prepare standardized clinical case questions for comparison with the conflicting-evidence experiments.
+
+These questions were intended to examine model decision behavior in a separate, more standardized clinical setting.
+
+5. LITERATURE SCREENING AND EVIDENCE ANNOTATION
+
+During literature preparation, the research team was instructed to:
+
+- Identify relevant clinical publications.
+- Verify study types and clinical contexts.
+- Extract key recommendations and supporting evidence.
+- Identify genuine differences between clinical recommendations.
+- Apply directional evidence labels (+1, -1, 0) consistently.
+
+These directional labels were used to characterize the literature during evidence preparation. They were not model-generated clinical decisions.
+
+6. RELATIONSHIP TO THE FINAL EXPERIMENTS
+
+The original instructions proposed approximately 10–15 candidate conflicting-evidence packs. Nine evidence packs were ultimately included in the finalized E1 experiments.
+
+The original research framework specified three hierarchical decision levels: policy, operational implementation, and evidence attribution.
+
+It did not prescribe a separate model-generated field named Operational_Strategy.
+
+The final experiments and statistical analyses are documented separately in the manuscript and the methodological transparency materials.
+
+END OF DOCUMENT
