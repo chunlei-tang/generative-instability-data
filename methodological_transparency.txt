@@ -1,0 +1,177 @@
+METHODOLOGICAL TRANSPARENCY AND REPRODUCIBILITY
+
+Decision Stability under Conflicting Evidence in AI-Assisted Clinical Decision Systems
+
+1. PURPOSE
+
+This document provides additional methodological clarification regarding the experimental procedures, model-generated outputs, analytical variables, entropy calculations, and reproducibility of the study.
+
+The purpose is to distinguish the decisions generated directly by the AI models from the analytical representations used to evaluate decision stability.
+
+2. EXPERIMENTAL DESIGN
+
+The study was conducted in two separate stages.
+
+The initial exploratory stage involved seven repeated runs using earlier model versions. These experiments informed the development and interpretation of the subsequent study.
+
+The revised experimental stage involved 20 repeated runs using updated ChatGPT and Gemini models. These 20-run experiments constitute the primary basis of the reported statistical analyses.
+
+The two stages were conducted separately using different model versions. They should not be interpreted as 27 repeated runs of a single experiment or as directly interchangeable experimental datasets.
+
+The primary experiments included:
+
+E1 Baseline:
+Clinical decision-making under structured conflicting evidence.
+
+E1 Intervention:
+Clinical decision-making using the corresponding intervention prompts.
+
+E2 Baseline:
+Decision-making on standardized clinical questions.
+
+The E1 experiments used nine finalized evidence packs. The E2 experiments used 50 standardized questions.
+
+3. MODEL-GENERATED DECISION FIELDS
+
+The experimental prompts requested three categorical decision fields:
+
+- Policy_Decision
+- Operational_Interval
+- Evidence_Priority
+
+A verbalized Confidence score was also recorded.
+
+These fields were generated directly by the models and preserved in the experimental JSON outputs.
+
+The researchers did not manually assign individual model decisions.
+
+Operational_Strategy was not requested as a separate model-generated field.
+
+4. ANALYTICAL REPRESENTATION OF OPERATIONAL DECISIONS
+
+The model-generated Operational_Interval responses were examined using two complementary analytical representations.
+
+A. Operational_Strategy (K = 3)
+
+This representation distinguishes three operational approaches:
+
+- Fixed Interval
+- Risk-based
+- NotSpecified
+
+The numerical interval responses 2h, 3h, and 4h are grouped under Fixed Interval.
+
+B. Operational_Interval (K = 4)
+
+This representation distinguishes four analytical categories:
+
+- 2h
+- 3h
+- 4h
+- No Fixed Interval
+
+The original responses Risk-based and NotSpecified are grouped under No Fixed Interval because neither specifies a numerical repositioning interval.
+
+The complete mapping is:
+
+Original response: 2h
+Operational_Strategy: Fixed Interval
+Analytical Operational_Interval: 2h
+
+Original response: 3h
+Operational_Strategy: Fixed Interval
+Analytical Operational_Interval: 3h
+
+Original response: 4h
+Operational_Strategy: Fixed Interval
+Analytical Operational_Interval: 4h
+
+Original response: Risk-based
+Operational_Strategy: Risk-based
+Analytical Operational_Interval: No Fixed Interval
+
+Original response: NotSpecified
+Operational_Strategy: NotSpecified
+Analytical Operational_Interval: No Fixed Interval
+
+These representations are deterministic transformations of the model-generated operational responses, rather than additional decisions generated independently by the models.
+
+5. ENTROPY CALCULATIONS
+
+Decision stability was evaluated using Shannon entropy:
+
+H(X) = -sum[p(i) * log2(p(i))]
+
+where p(i) is the observed proportion of responses in category i.
+
+Normalized entropy was calculated as:
+
+H_normalized(X) = H(X) / log2(K)
+
+where K is the number of categories in the corresponding analytical representation.
+
+For Operational_Strategy, K = 3.
+
+For the analytical Operational_Interval measure, K = 4.
+
+Although the original prompt allowed five operational response options, the analytical Operational_Interval representation contains four categories because Risk-based and NotSpecified are combined.
+
+The value of K therefore refers to the analytical category structure, not necessarily the number of options in the original model prompt.
+
+6. VERIFICATION AGAINST ARCHIVED MODEL OUTPUTS
+
+The operational entropy values were independently recalculated from the archived 20-run model-generated JSON outputs using the category mappings described above.
+
+The following values were reproduced:
+
+Gemini E1 Baseline:
+Operational_Strategy = 0.5999 bits
+Operational_Interval = 0.3164 bits
+
+Gemini E1 Intervention:
+Operational_Strategy = 0.7373 bits
+Operational_Interval = 0.4773 bits
+
+ChatGPT E1 Baseline:
+Operational_Strategy = 0.0521 bits
+Operational_Interval = 0.0521 bits
+
+ChatGPT E1 Intervention:
+Operational_Strategy = 0.0000 bits
+Operational_Interval = 0.0000 bits
+
+These recalculations demonstrate that the reported operational entropy values can be reproduced from the archived model outputs using the stated mappings.
+
+The mappings were identified through independent verification of the archived data. Numerical agreement alone does not establish when these mappings were originally adopted; any historical claims about the original analysis workflow require separate documentation.
+
+7. REPRODUCIBILITY MATERIALS
+
+The study repository provides experimental prompts, structured evidence materials, and model-output documentation.
+
+For independent computational verification, the complete archived 20-run outputs and corresponding statistical result tables should be provided alongside the documented category mappings.
+
+Experimental replication involves submitting the same prompts to the specified model versions under comparable settings.
+
+Computational reproducibility involves recalculating the reported statistics from the archived model outputs.
+
+Because generative AI models may produce variable responses and model versions may change over time, a newly conducted experiment is not expected to reproduce every original model response exactly.
+
+The archived outputs provide the appropriate basis for verifying the numerical results reported in the manuscript.
+
+8. INTERPRETATION
+
+The study evaluates decision stability across three hierarchical clinical decision levels:
+
+Level 1: Policy decisions
+
+Level 2: Operational decisions
+
+Level 3: Evidence prioritization
+
+The four reported analytical measures do not imply that the models generated four independent categorical decision fields.
+
+Instead, the operational level was examined through two complementary representations of the same model-generated Operational_Interval response.
+
+This distinction clarifies the relationship between the experimental prompts, raw JSON outputs, and reported entropy calculations.
+
+END OF DOCUMENT
