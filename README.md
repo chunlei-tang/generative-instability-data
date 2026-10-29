@@ -129,7 +129,7 @@ The four analytical measures do not imply that the models generated four indepen
 
 ### Operational Category Mapping
 
-The operational decision was analyzed using two complementary representations:
+The archived operational responses can be represented using two complementary analytical categorizations that reproduce the reported entropy values.
 
 | Original model response | Operational_Strategy (K=3) | Analytical Operational_Interval (K=4) |
 |---|---|---|
